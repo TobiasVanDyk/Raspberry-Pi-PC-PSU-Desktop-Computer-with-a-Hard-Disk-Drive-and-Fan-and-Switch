@@ -12,7 +12,7 @@ In addition it is not a good idea to run a Pi for an extended period from an SD 
 
 The photo shows the completed Pi case connected to a small monitor, stereo speakers, and a wireless combo-keyboard trackpad, and Hayley Westenra singing Scarborough Fair using the Rasbian and omxplayer's video hardware acceleration.
 
-The Raspberry Pi 3 in some of the older photos was recently replaced with a a Raspberry Pi 4 4GB. The temperature stays between 40 and 50 degrees Celsius. I have tested the Raspberry Pi 4 with an Orico USB 3 enclosure circuit board and it works well - to remove the USB to SATA circuit board unclip the aluminum plate at the top and then you can remove the circuit board after unscrewing two small screws. Details at [**Orico USB 3 Enclosure**](www.orico.co.za/product/orico-usb3-0-2-5-enclosure-blue/)
+The Raspberry Pi 3 in some of the older photos was recently replaced with a a Raspberry Pi 4 4GB. The temperature stays between 40 and 50 degrees Celsius. I have tested the Raspberry Pi 4 with an Orico USB 3 enclosure circuit board and it works well - to remove the USB to SATA circuit board unclip the aluminum plate at the top and then you can remove the circuit board after unscrewing two small screws. Details at [**Orico USB 3 Enclosure**](https://www.orico.co.za/product/orico-usb3-0-2-5-enclosure-blue/)
 
 
 ### Parts List
@@ -149,7 +149,7 @@ df -h
 Check if sda2 shows correctly then reboot and check again.
 
 
-9. If a DAC used create new asound.conf in etc/ (nano /etc/alsa.conf with the following lines:
+If a DAC used create new asound.conf in etc/ (nano /etc/alsa.conf with the following lines:
 
 pcm.!default { type hw card 0 }
 
@@ -158,10 +158,4 @@ ctl.!default { type hw card 0 }
 10. Reboot then add DSP and analog sound to sound config in Raspberry Pi setting Make sure main volume click on speaker in panel is not 100% Open a console in sda2 folder with the video then:
 
 If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with BCM audio just open terminal in Music folder and omxplayer name.mp4
-Step 6: Raspberry Pi 4 $GB
-Picture of Raspberry Pi 4 $GB
-Picture of Raspberry Pi 4 $GB
-Picture of Raspberry Pi 4 $GB
-Picture of Raspberry Pi 4 $GB
 
-I bought a Raspberry Pi 4 4GB and replaced the Raspberry Pi 3 with it in the same enclosure. The temperature stays between 40 and 50 degrees Celsius. I must now obtain a USB 3 HDD or SSD to SATA converter and replace the USB 2 version with that.
