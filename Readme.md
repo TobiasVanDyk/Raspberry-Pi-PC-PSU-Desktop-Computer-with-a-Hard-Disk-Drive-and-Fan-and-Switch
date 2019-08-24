@@ -163,7 +163,7 @@ Make sure main volume click on speaker in panel is not 100% Open a console in sd
 
 If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with BCM audio just open terminal in Music folder and omxplayer name.mp4
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-5.jpg" width="750" height="719" />
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-5.jpg" width="850" height="719" />
 
 <img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-6.jpg" width="850" height="719" />
 
