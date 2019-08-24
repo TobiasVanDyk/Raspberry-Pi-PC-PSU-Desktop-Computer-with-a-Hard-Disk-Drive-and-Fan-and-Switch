@@ -177,6 +177,82 @@ If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with 
 
 <img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-11.jpg" width="750" height="719" />
 
+In another build, I used an inexpensive Wall Light Switch Box as a Raspberry Pi and DAC Hat Case with space to include a Power Switch as well.
+
+The Raspberry Pi 3 has a board dimension of 56mm wide and 85mm long and I recently discovered that my PiFi Plus DAC hat and the Raspberry Pi will fit into an inexpensive (less than $ 0.50) PVC plastic electrical household wall box used to mount light switches - the one I bought had an outside dimension of 105mm x 60mm x 45mm, and on the inside it was 56mm wide and 101mm long - this means the Pi board will fit (tightly).
+
+The PiFiDAC+ can be obtained from itead.cc or from banggood or from seeedstudio.com for about $6 to $35.
+
+I used a Dremel wheel to cut out the larger rectangular openings, and a step-drill to make the larger round openings - PVC is very easy to drill, cut, file, sand and glue.
+
+I included a power switch for the Pi on the front panel - this is directly connected (soldered on the bottom of the Pi's pcboard), to GPIO pin 4 (+5v). This and a wire from GPIO pin 6 (Ground) is then soldered to a normal power barrel connector mounted on the back panel.
+
+This socket can be used in one of two ways:
+
+1. Use the normal Pi micro-USB connector to supply power to the Pi - the barrel connector will then output +5v to for example a notebook hard disk power supply.
+
+2. Use the barrel connector to supply power to the Pi directly.
+
+The case has a large round opening on the side opposite to the four USB connectors. This is used for ventilation, and also as a window to the Pi's two status lights (red and green), but most importantly the Pi's SD card can be removed and inserted through this hole using a tweezer.
+
+The ventilation seems to be adequate without a fan or a heatsink for the Pi - after an hour of playing flac and mp3 files the CPU temperature varied between 49 and 51 degrees Celsius. There is space to fit a small fan underneath the top cover in the section above the Pi's USB connectors - a fan such as those used for hdd coolers would be suitable and some will operate silently if powered from 5 volt instead of 12 volt.
+
+I intend to use this Pi DAC Box with a 1 TB notebook drive to play music through my stereo amplifier and I must still configure VNC on the Pi and VNC Viewer on a PC, so that I can use the Pi headless from a Windows PC to play music.
+
+I recently upgraded the Pi in the DAC box to the Pi 3B+ and I decided it should now occupy a permanent place in my living room as an audio file player. I used Audacious as the Audio player on the Pi
+
+I partitioned the 1TB hard disk into two partitions - a 50GB partition for the raspberry pi root file system and the rest as a FAT32 partition which holds all the audio files. Doing it this way enables me to plug the hdd into a windows computer and then synchronize it with my music collection on the windows computer. I still use the SD card on the Pi but only as the boot partition - which is read-only and unlikely to be corrupted should there be a power failure.
+
+Windows has a remote desktop client-server built-in already - mstsc.exe or the Remote Desktop Connection.
+
+On the pi side you must install xrdp as shown below:
+
+(1) Install xrdp:
+sudo apt-get install xrdp
+sudo reboot
+
+Test if xrdp works by:
+sudo xrdp
+
+If it ssys it is already running then proceed to the windows computer setup else you will have to remove RealVNC as there is a clash with it and xrdp:
+
+(2) Optional: Remove RealVNC:
+
+sudo apt-get purge realvnc-vnc-server
+
+sudo reboot
+
+and check again if xrdp is now running
+
+(3) If you are running a WiFi connection on the Pi hoover your mouse pointer over the WiFi symbol and write down the wlan ip address such as 192.168.8.102 for example
+
+You can also run:
+
+ifconfig wlan0
+
+on the raspberry pi
+
+If you want to know the raspberry pi's ip address from the windows computer you can run:
+
+nslookup raspberrypi
+
+from the windows command prompt - note that the windows computer and the raspberry must be connected to the same network
+
+(4) On the windows computer right-click on your desktop and choose new shortcut and enter mstsc.exe and name it Remote Desktop. Then open it and for the computer name enter the ip address for the pi and in the second box enter the username pi
+
+It will then connect and ask your for the pi's password.
+
+Then you can open audacious and play you music from your windows computer through the Pi.
+
+To shutdown the pi use:
+
+sudo shutdown
+
+
+The Pi is mounted on four short 5mm spacers. The top of the wall box was made from a sheet of thin 0.9mm white ABS plastic which can be easily cut and drilled. Please refer to the series of photos for more details on how to mount the Pi and its DAC hat.
+
+The PiFi DAC+ is an inexpensive substitute for the HiFi Berry Pi DAC+ Hat and can be configured in exactly the same way on the Raspberry Pi running Raspbian Stretch - replace the line dtparam=audio=on from /boot/config.txt if with dtoverlay=hifiberry-dacplus. 
+
 <img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/p0.jpg" width="850" height="719" />
 
 <img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/p1.jpg" width="850" height="719" />
