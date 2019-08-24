@@ -4,7 +4,7 @@
 
 <img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-2.jpg" width="809" height="582" />
 
-For more details please see the [**Instructables project**](https://www.instructables.com/id/A-Rasberry-Pi-PC-PSU-Desktop-Computer-With-Hard-Di/)
+For more details please refer to the two [**Instructables project 1**](https://www.instructables.com/id/A-Rasberry-Pi-PC-PSU-Desktop-Computer-With-Hard-Di/) or [**Instructables project 2**](https://www.instructables.com/id/Raspberry-Pi-DAC-Hat-Case-From-PVC-Wall-Box/)
 
 I grew tired of connecting all the peripherals to my Raspberry Pi 3 or 4, every time I wanted to use it. I decided I wanted a Raspberry Pi computer permanently connected to a power supply, hard disk for the root file system and data, a large fan that can rotate slowly and quietly, and a monitor and speakers.
 
@@ -81,6 +81,7 @@ Add: boot_delay=1 and again rootdelay=5 to the line in /boot/cmdline.txt should 
 ### Shell Scripting Source
 
 Note: Please refer to BootHDD.sh
+
 Keep the Dos Boot Partition on the SD Card and Move the Root and User Files to a Hard Disk or SSD.
 
 Prepare a suitable 2.5" hdd or ssd in either windows or linux (attach the hdd through tan external USB enclosure), by creating two partitions: A small 20GB to 100GB partition which will hold the root file system and a larger partion that fills the rest of the drive which wil be used for user data.
@@ -89,12 +90,8 @@ Do not format or mount the partitions - they will both be formatted as ext4.
 
 Attach the HDD/SSD to the Raspberry Pi via a USB to SATA converter or take out the circuit board from a an external USB converter. Make a bootable sd card with newest Raspbian June 2019 image and boot Pi - say CANCEL when new setup procedure shows. 
 
-2. Change config.txt sudo nano /boot/config.txt (Press Ctr-O to save and Ctr-X to exit) by adding at bottom: program_usb_timeout=1
+Change config.txt sudo nano /boot/config.txt (Press Ctr-O to save and Ctr-X to exit) by adding at bottom: program_usb_timeout=1
 max_usb_current=1
-
-If a DAC is used then also:
-Remove the driver for the onboard sound: Remove the line dtparam=audio=on from /boot/config.txt if it exists (can just add # in front)
-Also in /boot/config.txt and add the following line: dtoverlay=hifiberry-dacplus
 
 Change config.txt 
 sudo nano /boot/config.txt 
@@ -157,7 +154,25 @@ pcm.!default { type hw card 0 }
 
 ctl.!default { type hw card 0 }
 
-10. Reboot then add DSP and analog sound to sound config in Raspberry Pi setting Make sure main volume click on speaker in panel is not 100% Open a console in sda2 folder with the video then:
+Reboot then add DSP and analog sound to sound config in Raspberry Pi setting:
+ 
+Remove the driver for the onboard sound: Remove the line dtparam=audio=on from /boot/config.txt if it exists (can just add # in front). 
+Also in /boot/config.txt add the following line: dtoverlay=hifiberry-dacplus
+
+Make sure main volume click on speaker in panel is not 100% Open a console in sda2 folder with the video then:
 
 If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with BCM audio just open terminal in Music folder and omxplayer name.mp4
 
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-5.jpg" width="750" height="719" />
+
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-6.jpg" width="750" height="719" />
+
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-7.jpg" width="750" height="719" />
+
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-8.jpg" width="750" height="719" />
+
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-9.jpg" width="750" height="719" />
+
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-10.jpg" width="750" height="719" />
+
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-11.jpg" width="750" height="719" />
