@@ -165,15 +165,15 @@ If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with 
 
 <img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-5.jpg" width="750" height="719" />
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-6.jpg" width="750" height="719" />
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-6.jpg" width="850" height="719" />
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-7.jpg" width="750" height="719" />
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-7.jpg" width="850" height="719" />
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-8.jpg" width="750" height="719" />
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-8.jpg" width="850" height="719" />
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-9.jpg" width="750" height="719" />
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-9.jpg" width="850" height="719" />
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-10.jpg" width="750" height="719" />
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-10.jpg" width="850" height="719" />
 
 <img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-11.jpg" width="750" height="719" />
 
@@ -185,8 +185,4 @@ If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with 
 
 <img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/p7.jpg" width="850" height="719" />
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/p8.jpg" width="850" height="719" />
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/p9.jpg" width="850" height="719" />
-
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/p10.jpg" width="850" height="719" />
