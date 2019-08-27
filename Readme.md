@@ -12,8 +12,13 @@ In addition it is not a good idea to run a Pi for an extended period from an SD 
 
 The photo shows the completed Pi case connected to a small monitor, stereo speakers, and a wireless combo-keyboard trackpad, and Hayley Westenra singing Scarborough Fair using the Rasbian and omxplayer's video hardware acceleration.
 
-The Raspberry Pi 3 in some of the older photos was recently replaced with a a Raspberry Pi 4 4GB. The temperature stays between 40 and 50 degrees Celsius. I have tested the Raspberry Pi 4 with an Orico USB 3 enclosure circuit board and it works well - to remove the USB to SATA circuit board unclip the aluminum plate at the top and then you can remove the circuit board after unscrewing two small screws. Details at [**Orico USB 3 Enclosure**](https://www.orico.co.za/product/orico-usb3-0-2-5-enclosure-blue/)
+I bought a Raspberry Pi 4 4GB and replaced the Raspberry Pi 3 with it in the same enclosure. The temperature stays between 40 and 50 degrees Celsius even under heavy CPU load conditions. I also acquired two different USB 3 HDD/SSD to SATA converters, and replaced the USB 2 version with that for testing purposes.
 
+Firstly I tested the Raspberry Pi 4 with an Orico USB 3 enclosure circuit board and it works well - to remove the circuit board unclip the aluminum plate at the top and then you can remove the circuit board after unscrewing two small screws. A 10 cm long connection cable is looped once underneath the hard disk  inside the PSU case which keeps it out of the way. Details at [**Orico USB 3 Enclosure**](https://www.orico.co.za/product/orico-usb3-0-2-5-enclosure-blue/)
+
+Secondly I tested a 5cm long open USB3 to SATA converter (please see picture), which also worked well but the shorter cable was too stiff to force it all the way inside the PSU case.
+
+Using a USB 3 interface dis result in faster boot and response times (such as when opening the Chromium browser or LibreOffice Writer, but it was not overwhelmingly faster. In addition the Raspberry Pi 3 and 4, supplies a maximum of 1.2 A spread over all 4 USB 2 and USB 3 ports, which is less than the USB 3 standard. I will therefore reove the Power connection on the front USB interface and connect it to a second identical variable 5v power supply module. This will enable me to run another HDD from the front USB interface.
 
 ### Parts List
 
