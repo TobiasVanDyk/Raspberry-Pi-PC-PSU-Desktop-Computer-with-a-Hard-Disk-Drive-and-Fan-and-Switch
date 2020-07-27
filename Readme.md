@@ -1,8 +1,9 @@
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-1.jpg" width="600" height="437" />
-
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-2.jpg" width="600" height="437" />
+<p align="center">
+<img src="photo-1.jpg" width="400" />  
+<img src="photo-2.jpg" width="400" />  
+</p>
 
 For more details please refer to the two [**Instructables project 1**](https://www.instructables.com/id/A-Rasberry-Pi-PC-PSU-Desktop-Computer-With-Hard-Di/) or [**Instructables project 2**](https://www.instructables.com/id/Raspberry-Pi-DAC-Hat-Case-From-PVC-Wall-Box/)
 
