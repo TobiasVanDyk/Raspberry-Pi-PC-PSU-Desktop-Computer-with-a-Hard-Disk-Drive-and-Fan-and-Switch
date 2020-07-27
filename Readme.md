@@ -19,7 +19,7 @@ Firstly I tested the Raspberry Pi 4 with an Orico USB 3 enclosure circuit board 
 
 Secondly I tested a 5cm long open USB3 to SATA converter (please see picture), which also worked well but the shorter cable was too stiff to force it all the way inside the PSU case.
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/SATAUSB31.jpg" width="300" height="300" />
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/SATAUSB31.jpg" width="250" height="250" />
 
 Using a USB 3 interface did result in faster boot and response times (such as when opening the Chromium browser or LibreOffice Writer, but it was not overwhelmingly faster. In addition the Raspberry Pi 3 and 4, supply a maximum of 1.2A spread over all 4 USB 2 and USB 3 ports, which is significantly less than the USB 3 standard. I will therefore remove the power connection on the front USB interface and connect it to a second identical variable 5v power supply module. This will enable me to run another HDD from the front USB interface.
 
@@ -171,19 +171,21 @@ Make sure main volume click on speaker in panel is not 100% Open a console in sd
 
 If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with BCM audio just open terminal in Music folder and omxplayer name.mp4
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-5.jpg" width="850" height="719" />
+<p align="center">
+<img src="photo-5.jpg" width="400" />  
+<img src="photo-6.jpg" width="400" />  
+</p>
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-6.jpg" width="850" height="719" />
+<p align="center">
+<img src="photo-7.jpg" width="400" />  
+<img src="photo-8.jpg" width="400" />  
+</p>
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-7.jpg" width="850" height="719" />
-
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-8.jpg" width="850" height="719" />
-
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-9.jpg" width="850" height="719" />
-
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-10.jpg" width="850" height="719" />
-
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-11.jpg" width="750" height="719" />
+<p align="center">
+<img src="photo-9.jpg" width="320" />  
+<img src="photo-10.jpg" width="320" />  
+<img src="photo-11.jpg" width="320" />  
+</p>
 
 In another build, I used an inexpensive Wall Light Switch Box as a Raspberry Pi and DAC Hat Case with space to include a Power Switch as well.
 
@@ -261,12 +263,15 @@ The Pi is mounted on four short 5mm spacers. The top of the wall box was made fr
 
 The PiFi DAC+ is an inexpensive substitute for the HiFi Berry Pi DAC+ Hat and can be configured in exactly the same way on the Raspberry Pi running Raspbian Stretch - replace the line dtparam=audio=on from /boot/config.txt if with dtoverlay=hifiberry-dacplus. 
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/p0.jpg" width="850" height="719" />
+<p align="center">
+<img src="p0.jpg" width="400" />  
+<img src="p1.jpg" width="400" />  
+</p>
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/p1.jpg" width="850" height="719" />
+<p align="center">
+<img src="p2.jpg" width="400" />  
+<img src="p7.jpg" width="400" />  
+</p>
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/p2.jpg" width="850" height="719" />
-
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/p7.jpg" width="850" height="719" />
 
 
