@@ -1,5 +1,4 @@
 #!/bin/bash
-# Not doing sudo chmod +x BootHDD.sh is a wise thing..
 
 <<COMMENT
 A sequence of shell scripts to 
