@@ -1,8 +1,8 @@
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
 <p align="center">
-<img src="photo-1.jpg" width="400" />  
-<img src="photo-2.jpg" width="400" />  
+<img src="images/photo-1.jpg" width="400" />  
+<img src="images/photo-2.jpg" width="400" />  
 </p>
 
 For more details please refer to the two [**Instructables project 1**](https://www.instructables.com/id/A-Rasberry-Pi-PC-PSU-Desktop-Computer-With-Hard-Di/) or [**Instructables project 2**](https://www.instructables.com/id/Raspberry-Pi-DAC-Hat-Case-From-PVC-Wall-Box/)
@@ -19,13 +19,13 @@ Firstly I tested the Raspberry Pi 4 with an Orico USB 3 enclosure circuit board 
 
 Secondly I tested a 5cm long open USB3 to SATA converter (please see picture), which also worked well but the shorter cable was too stiff to force it all the way inside the PSU case.
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/SATAUSB31.jpg" width="250" height="250" />
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/images/SATAUSB31.jpg" width="250" height="250" />
 
 Using a USB 3 interface did result in faster boot and response times (such as when opening the Chromium browser or LibreOffice Writer, but it was not overwhelmingly faster. In addition the Raspberry Pi 3 and 4, supply a maximum of 1.2A spread over all 4 USB 2 and USB 3 ports, which is significantly less than the USB 3 standard. I will therefore remove the power connection on the front USB interface and connect it to a second identical variable 5v power supply module. This will enable me to run another HDD from the front USB interface.
 
 ### Parts List
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-3.jpg" width="750" height="719" />
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/images/photo-3.jpg" width="750" height="719" />
 
 * Raspberry Pi 3 or 4
 * AC-DC PSU 12v 3A module
@@ -43,7 +43,7 @@ Using a USB 3 interface did result in faster boot and response times (such as wh
 * Connection wire etc.
 
 ### Construction and Connections
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-4.jpg" width="831" height="706" />
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/images/photo-4.jpg" width="831" height="706" />
 
 An old computer PSU case seemed to be a convenient size to house the Pi, its power supply, and a stripped external USB hard disk. There was not enough space in the PSU case to mount the external hdd with its case - I therefore opened it and only kept the small circuit board attached to the hdd. I also added a power switch plus USB sockets on the front and back, and it had space for a large fan to keep everything cool, and I made provision for a DAC hat to be fitted should I acquire one. I used a 12v 3A AC-DC power supply as the main PSU, and added two smaller adjustable 5v and 7v for the fan, DC-DC PSU's.
 
@@ -51,7 +51,7 @@ The photo shows all the components when partially assembled in the PSU case. I m
 
 The other photos show the completed Pi case connected to a small monitor, stereo speakers, and a wireless combo keyboard track pad, and the completed case from various angles.
 
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/photo-12.jpg" width="1024" height="362" />
+<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/images/photo-12.jpg" width="1024" height="362" />
 
 If you look at the photo above you can see that I have connected two wires (brown and white) directly to the raspberry Pi 3 or 4 GPIO pins. In this case the Pi 3 or 4 is powered directly via its GPIO pins 2 or 4 are +5v, pin 6 (and others) for ground - but note that you must triple-check that you are supplying no more than about 5.2 volt to those pins as by doing this you're bypassing the poly-fuse protection. I used Pins 2 for +5v and the pin next to it for Ground. As I am supplying the Pi through two regulated power supplies - first 12v and then 5.1v, I was satisfied with the direct supply connection.
 
@@ -172,19 +172,19 @@ Make sure main volume click on speaker in panel is not 100% Open a console in sd
 If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with BCM audio just open terminal in Music folder and omxplayer name.mp4
 
 <p align="center">
-<img src="photo-5.jpg" width="400" />  
-<img src="photo-6.jpg" width="400" />  
+<img src="images/photo-5.jpg" width="400" />  
+<img src="images/photo-6.jpg" width="400" />  
 </p>
 
 <p align="center">
-<img src="photo-7.jpg" width="400" />  
-<img src="photo-8.jpg" width="400" />  
+<img src="images/photo-7.jpg" width="400" />  
+<img src="images/photo-8.jpg" width="400" />  
 </p>
 
 <p align="center">
-<img src="photo-9.jpg" width="320" />  
-<img src="photo-10.jpg" width="320" />  
-<img src="photo-11.jpg" width="320" />  
+<img src="images/photo-9.jpg" width="320" />  
+<img src="images/photo-10.jpg" width="320" />  
+<img src="images/photo-11.jpg" width="320" />  
 </p>
 
 In another build, I used an inexpensive Wall Light Switch Box as a Raspberry Pi and DAC Hat Case with space to include a Power Switch as well.
@@ -264,13 +264,13 @@ The Pi is mounted on four short 5mm spacers. The top of the wall box was made fr
 The PiFi DAC+ is an inexpensive substitute for the HiFi Berry Pi DAC+ Hat and can be configured in exactly the same way on the Raspberry Pi running Raspbian Stretch - replace the line dtparam=audio=on from /boot/config.txt if with dtoverlay=hifiberry-dacplus. 
 
 <p align="center">
-<img src="p0.jpg" width="400" />  
-<img src="p1.jpg" width="400" />  
+<img src="images/p0.jpg" width="400" />  
+<img src="images/p1.jpg" width="400" />  
 </p>
 
 <p align="center">
-<img src="p2.jpg" width="400" />  
-<img src="p7.jpg" width="400" />  
+<img src="images/p2.jpg" width="400" />  
+<img src="images/p7.jpg" width="400" />  
 </p>
 
 
