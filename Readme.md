@@ -14,13 +14,13 @@ In addition it is not a good idea to run a Pi for an extended period from an SD 
 The photos shows the completed Pi case connected to a small monitor, stereo speakers, and a wireless combo-keyboard trackpad, and Hayley Westenra singing Scarborough Fair using the Rasbian and omxplayer's video hardware acceleration. I later added a PCM5102A DAC Hat, and the four photos below show the result.
 
 <p align="left">
-<img src="images/DACOn1.jpg" width="350" />  
+<img src="images/DACOn1.jpg" width="400" />  
 <img src="images/DACOn2.jpg" width="350" /> 
 <br>
  
 <p align="left">
 <img src="images/DACBack1.jpg" width="350" />  
-<img src="images/DACInsideOff1.jpg" width="350" /> 
+<img src="images/DACInsideOff1.jpg" width="400" /> 
 <br>
  
 I bought a Raspberry Pi 4 4GB and replaced the Raspberry Pi 3 with it in the same enclosure. The temperature stays between 40 and 50 degrees Celsius even under heavy CPU load conditions. I also acquired two different USB 3 HDD/SSD to SATA converters, and replaced the USB 2 version with that for testing purposes.
