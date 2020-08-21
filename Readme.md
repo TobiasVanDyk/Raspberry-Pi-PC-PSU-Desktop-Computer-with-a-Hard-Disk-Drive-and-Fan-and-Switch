@@ -31,11 +31,9 @@ Secondly I tested a 5cm long open USB3 to SATA converter (please see picture), w
 
 [**Orico USB 3 Enclosure**](https://www.orico.co.za/product/orico-usb3-0-2-5-enclosure-blue/) and PCM5102 DAC from [**Micro-Robotics**](https://www.robotics.org.za/PCM5102):
 <p align="left">
-<img src="images/SATAUSB31.jpg.jpg" width="250" />  
+<img src="images/SATAUSB31.jpg" width="250" />  
 <img src="images/PCM5102A.jpg" width="250" /> 
 </p>
-
-<img src="https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/images/SATAUSB31.jpg" width="250" height="250" />
 
 Using a USB 3 interface did result in faster boot and response times (such as when opening the Chromium browser or LibreOffice Writer, but it was not overwhelmingly faster. In addition the Raspberry Pi 3 and 4, supply a maximum of 1.2A spread over all 4 USB 2 and USB 3 ports, which is significantly less than the USB 3 standard. I will therefore remove the power connection on the front USB interface and connect it to a second identical variable 5v power supply module. This will enable me to run another HDD from the front USB interface.
 
