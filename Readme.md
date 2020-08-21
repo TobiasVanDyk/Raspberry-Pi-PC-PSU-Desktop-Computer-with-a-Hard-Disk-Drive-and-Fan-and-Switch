@@ -11,7 +11,7 @@ I grew tired of connecting all the peripherals to my Raspberry Pi 3 or 4, every 
 
 In addition it is not a good idea to run a Pi for an extended period from an SD Card - these have a limited write cycle (about 10,000 times?) and I therefore decided to investigate other ways to run the Pi.
 
-The photos shows the completed Pi case connected to a small monitor, stereo speakers, and a wireless combo-keyboard trackpad, and Hayley Westenra singing Scarborough Fair using the Rasbian and omxplayer's video hardware acceleration. I later added a PCM5102A DAC Hat (see picture below), and the four photos below show the result.
+The photos shows the completed Pi case connected to a small monitor, stereo speakers, and a wireless combo-keyboard trackpad, and Hayley Westenra singing Scarborough Fair using the Rasbian and omxplayer's video hardware acceleration. I later added a PCM5122 DAC Hat (see picture below), and the four photos below show the result.
 
 <p align="left">
 <img src="images/DACOn1.jpg" width="400" />  
@@ -29,10 +29,10 @@ Firstly I tested the Raspberry Pi 4 with an Orico USB 3 enclosure circuit board 
 
 Secondly I tested a 5cm long open USB3 to SATA converter (please see picture), which also worked well but the shorter cable was too stiff to force it all the way inside the PSU case.
 
-[**Orico USB 3 Enclosure**](https://www.orico.co.za/product/orico-usb3-0-2-5-enclosure-blue/) and PCM5102 DAC from [**Micro-Robotics**](https://www.robotics.org.za/PCM5102):
+[**Orico USB 3 Enclosure**](https://www.orico.co.za/product/orico-usb3-0-2-5-enclosure-blue/) and **PCM5122 DAC**:
 <p align="left">
 <img src="images/SATAUSB31.jpg" width="250" />  
-<img src="images/PCM5102A.jpg" width="250" /> 
+<img src="images/PCM5122.jpg" width="250" /> 
 </p>
 
 Using a USB 3 interface did result in faster boot and response times (such as when opening the Chromium browser or LibreOffice Writer, but it was not overwhelmingly faster. In addition the Raspberry Pi 3 and 4, supply a maximum of 1.2A spread over all 4 USB 2 and USB 3 ports, which is significantly less than the USB 3 standard. I will therefore remove the power connection on the front USB interface and connect it to a second identical variable 5v power supply module. This will enable me to run another HDD from the front USB interface.
