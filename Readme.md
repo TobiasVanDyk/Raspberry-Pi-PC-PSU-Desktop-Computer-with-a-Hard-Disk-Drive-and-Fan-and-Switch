@@ -1,5 +1,11 @@
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
+A second Raspberry Pi built inside an old PC power supply is underway. This use a fan on top and the arrangement is therefore different.
+<p align="center">
+<img src="images/newrpipc1.jpg" width="400" />  
+<img src="images/newrpipc2.jpg" width="400" />  
+</p>
+
 <p align="center">
 <img src="images/photo-1.jpg" width="400" />  
 <img src="images/photo-2.jpg" width="400" />  
