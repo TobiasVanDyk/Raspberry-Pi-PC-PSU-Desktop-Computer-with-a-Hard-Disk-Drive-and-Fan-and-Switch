@@ -1,6 +1,6 @@
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
-A second Raspberry Pi built inside an old PC power supply is underway. This use a fan on top and the arrangement is therefore different. [**Luma Oled for Python**](https://github.com/rm-hull/luma.oled) will be used to display the song or video information on a small OLED display mounted in the front of the case. The audio hat is the Wolfson WM8960 as discussed in two of the other repositories here.
+A second Raspberry Pi built inside an old PC power supply is underway. This use a fan on top and the arrangement is therefore different. [**Luma Oled for Python**](https://github.com/rm-hull/luma.oled) will be used to display the song or video information on a small OLED display mounted in the front of the case. The audio hat is the Wolfson WM8960 as discussed in two of the other repositories here. The SSD1306 display uses i2c for communication and therefore a four-wire cable is sufficient to connect it to the Raspberry Pi GPIO connector.
 <p align="center">
 <img src="images/newrpipc5.jpg" width="400" />  
 <img src="images/newrpipc4.jpg" width="400" />  
