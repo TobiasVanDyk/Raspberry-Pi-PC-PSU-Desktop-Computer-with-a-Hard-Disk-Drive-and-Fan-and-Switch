@@ -1,6 +1,6 @@
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
-A second Raspberry Pi built inside an old PC power supply is underway. This use a fan on top and the arrangement is therefore different.
+A second Raspberry Pi built inside an old PC power supply is underway. This use a fan on top and the arrangement is therefore different. [**Luma Oled for Python**](https://github.com/rm-hull/luma.oled) will be used to display the song or video information ona small OLED display mounted in the front of the case.
 <p align="center">
 <img src="images/newrpipc5.jpg" width="400" />  
 <img src="images/newrpipc4.jpg" width="400" />  
