@@ -246,7 +246,7 @@ class SSD1306_64_48(SSD1306Base):
         # 64x48 pixel specific initialization.
         self.command(SSD1306_DISPLAYOFF)                    # 0xAE
         self.command(SSD1306_SETDISPLAYCLOCKDIV)            # 0xD5
-        self.command(0x80)                                  ###### the suggested ratio 0x40=64
+        self.command(0x40)                                  ###### the suggested ratio 0x40=64
 
         self.command(SSD1306_SETMULTIPLEX)                  # 0xA8
         self.command(0x2F)                                  ###### ssd1306_command(SSD1306_LCDHEIGHT - 1) 0x2F=47
