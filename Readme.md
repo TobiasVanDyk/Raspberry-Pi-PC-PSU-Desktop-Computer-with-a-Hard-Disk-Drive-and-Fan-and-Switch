@@ -81,6 +81,14 @@ The other photos show the completed Pi case connected to a small monitor, stereo
 
 If you look at the photo above you can see that I have connected two wires (brown and white) directly to the raspberry Pi 3 or 4 GPIO pins. In this case the Pi 3 or 4 is powered directly via its GPIO pins 2 or 4 are +5v, pin 6 (and others) for ground - but note that you must triple-check that you are supplying no more than about 5.2 volt to those pins as by doing this you're bypassing the poly-fuse protection. I used Pins 2 for +5v and the pin next to it for Ground. As I am supplying the Pi through two regulated power supplies - first 12v and then 5.1v, I was satisfied with the direct supply connection.
 
+The new Pi case use a better connection to the GPIO connector with two female headers - see the three photos below:
+
+<p align="center">
+<img src="images/GPIOConnect1.jpg" width="250" />  
+<img src="images/GPIOConnect2.jpg" width="250" /> 
+<img src="images/GPIOConnect3.jpg" width="250" />  
+</p>
+
 I was worried that the metal case would block the Raspberry Pi's ability to connect to my Wi-Fi router - in the end I made two 2 cm holes on the side panel next to the Pi board with the result that the number of bars on the Wi-Fi indicator on Raspbian stayed the same whether the case was closed or open.
 
 ### Connection Details:
