@@ -1,4 +1,7 @@
  
+# 64x48 display with hardware I2C:
+# disp = SSD1306_64_48(rst=RST)
+############################################## Working
 # Copyright (c) 2017 Adafruit Industries
 # Author: Tony DiCola & James DeVito
 #
