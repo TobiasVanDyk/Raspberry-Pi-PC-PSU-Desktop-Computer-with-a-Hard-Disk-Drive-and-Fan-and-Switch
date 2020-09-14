@@ -1,5 +1,6 @@
 ############################
-### WIP !!!
+# Working but Adafruit-modified lib preferred
+# See stats5.py
 ############################
 import os
 import sys
