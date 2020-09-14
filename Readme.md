@@ -4,7 +4,7 @@ A second Raspberry Pi built inside an old PC power supply is underway. This will
 
 The audio hat is the Wolfson WM8960 as discussed in two of the other repositories here. The SSD1306 display uses i2c for communication and therefore a four-wire ribbon cable is sufficient to connect it to the Raspberry Pi GPIO connector.
 
-Modified python driver for SSD1306 in its 64x48 pixel version is now working after modified Adafruit library from comments from Mike Causer (modified display:SSD1306_COLUMNADDR, SSD1306_PAGEADDR), and Luma Oled (modified SETDISPLAYCLOCKDIV, SETMULTIPLEX,SETCOMPINS. See stats5.py.
+Modified python driver for SSD1306 in its 64x48 pixel version is now working after modified Adafruit library from comments from Mike Causer (modified display: SSD1306_COLUMNADDR, SSD1306_PAGEADDR), and Luma Oled (modified SETDISPLAYCLOCKDIV, SETMULTIPLEX, SETCOMPINS. See stats5.py.
 
 <p align="center">
 <img src="images/newrpipc5.jpg" width="400" />  
