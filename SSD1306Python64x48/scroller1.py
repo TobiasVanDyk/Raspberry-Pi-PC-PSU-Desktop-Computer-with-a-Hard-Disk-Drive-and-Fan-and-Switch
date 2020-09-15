@@ -323,25 +323,24 @@ x = 0
 # Load default font.
 font = ImageFont.load_default()
 
+# Draw a black filled box to clear the image.
+draw.rectangle((0,0,width-1,height-1), outline=1, fill=0)
+time.sleep(1)
+
+draw.text((2, 0),       "songscroll",  font=font, fill=255)
+draw.text((2, 12),      "audacious", font=font, fill=255)
+
+# Display image.
+disp.dim(True)           # No effect?
+disp.image(image)
+disp.display()
+time.sleep(1)
+# Clear display.
+disp.clear()
+disp.display()
+time.sleep(1)
+
 while True:
-
-    # Draw a black filled box to clear the image.
-    draw.rectangle((0,0,width-1,height-1), outline=1, fill=0)
-    time.sleep(1)
-
-    draw.text((2, 0),       "songscroll",  font=font, fill=255)
-    draw.text((2, 12),      "audacious", font=font, fill=255)
-
-    # Display image.
-    disp.dim(True)           # No effect?
-    disp.image(image)
-    disp.display()
-    time.sleep(1)
-    # Clear display.
-    disp.clear()
-    disp.display()
-    time.sleep(1)
-
     songtitle = subprocess.check_output("audtool current-song-tuple-data title", shell=True)
     songartist = subprocess.check_output("audtool current-song-tuple-data artist", shell=True)
     songinfo = subprocess.check_output("audtool current-song", shell=True)
