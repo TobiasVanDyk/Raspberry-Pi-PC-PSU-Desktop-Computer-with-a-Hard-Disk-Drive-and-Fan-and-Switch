@@ -1,6 +1,6 @@
 ############################
 # Working but Adafruit-modified lib preferred
-# See stats5.py
+# See scroller1.py
 ############################
 import os
 import sys
@@ -17,10 +17,7 @@ from luma.oled.device import ssd1306
 
 serial = i2c(port=1, address=0x3C)
 device = ssd1306(serial, width=64, height=48)
-#device.height = 48
-#device.width = 64
 
-#songinfo = os.system("audtool current-song")
 songtitle = subprocess.check_output("audtool current-song-tuple-data title", shell=True)
 songartist = subprocess.check_output("audtool current-song-tuple-data artist", shell=True)
 songinfo = subprocess.check_output("audtool current-song", shell=True)
