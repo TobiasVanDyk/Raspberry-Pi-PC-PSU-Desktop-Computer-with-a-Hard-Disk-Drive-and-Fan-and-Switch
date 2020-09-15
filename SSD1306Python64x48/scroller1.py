@@ -1,3 +1,6 @@
+########################################################################################
+# Modified by Tobias van Dyk Sep 2020
+#
 # Copyright (c) 2017 Adafruit Industries
 # Author: Tony DiCola & James DeVito
 #
@@ -6,7 +9,8 @@
 # in the Software without restriction, including without limitation the rights
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
+# furnished to do so.
+#######################################################################################
 
 import time
 
@@ -319,11 +323,6 @@ x = 0
 # Load default font.
 font = ImageFont.load_default()
 
-# Alternatively load a TTF font.  Make sure the .ttf font file is in the same directory as the python script!
-# Some other nice fonts to try: http://www.dafont.com/bitmap.php
-# font = ImageFont.truetype('Minecraftia.ttf', 8)
-
-
 while True:
 
     # Draw a black filled box to clear the image.
@@ -337,29 +336,22 @@ while True:
     disp.dim(True)           # No effect?
     disp.image(image)
     disp.display()
-    time.sleep(3)
+    time.sleep(1)
     # Clear display.
     disp.clear()
     disp.display()
     time.sleep(1)
 
-    #songinfo = os.system("audtool current-song")
     songtitle = subprocess.check_output("audtool current-song-tuple-data title", shell=True)
     songartist = subprocess.check_output("audtool current-song-tuple-data artist", shell=True)
     songinfo = subprocess.check_output("audtool current-song", shell=True)
 
-    print(songinfo)
-    
     offset = 0
     n = len(songinfo) - 1
-    #print(n)
-    #print(width)
     while offset<n-9:
         t = ""
         i = 0
         while i<10:
-            print(offset)
-            print(t)
             c = songinfo[offset+i]
             t += chr(c)
             i += 1
@@ -368,13 +360,7 @@ while True:
         disp.image(image)
         disp.display()
         offset += 1
-        time.sleep(0.5)
+        time.sleep(0.3)
 
-    #draw.text((2, 2), songinfo, fill="white")
-    #draw.rectangle((0,0,width-1,height-1), outline=0, fill=0)
-    #draw.text((0, 2), songtitle, fill="white")
-    #draw.text((0, 12), songartist, fill="white")
-    #disp.image(image)
-    #disp.display()
     time.sleep(1)
     
