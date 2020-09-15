@@ -341,7 +341,7 @@ while True:
     # Clear display.
     disp.clear()
     disp.display()
-    time.sleep(3)
+    time.sleep(1)
 
     #songinfo = os.system("audtool current-song")
     songtitle = subprocess.check_output("audtool current-song-tuple-data title", shell=True)
@@ -368,7 +368,7 @@ while True:
         disp.image(image)
         disp.display()
         offset += 1
-        time.sleep(1)
+        time.sleep(0.5)
 
     #draw.text((2, 2), songinfo, fill="white")
     #draw.rectangle((0,0,width-1,height-1), outline=0, fill=0)
@@ -376,5 +376,5 @@ while True:
     #draw.text((0, 12), songartist, fill="white")
     #disp.image(image)
     #disp.display()
-    time.sleep(5)
+    time.sleep(1)
     
