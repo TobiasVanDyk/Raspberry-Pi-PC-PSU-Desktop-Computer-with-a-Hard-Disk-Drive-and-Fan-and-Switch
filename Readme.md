@@ -9,11 +9,11 @@ A modified python driver for SSD1306 in its 64x48 pixel version is now working a
 As an example of the SSD1306 python driver refer to [**scroller1.py**](SSD1306Python64x48/scroller1.py) - this requires audacious to be running so that audtool can fetch the current song info and scroll it across the display.
 
 <p align="center">
-<img src="images/newrpipc5.jpg" width="400" />  
+<img src="images/newrpipc1.jpg" width="400" />  
 <img src="images/newrpipc4.jpg" width="400" />  
 </p>
 <p align="center">
-<img src="images/newrpipc1.jpg" width="400" />  
+<img src="images/newrpipc5.jpg" width="400" />  
 <img src="images/newrpipc2.jpg" width="400" />  
 </p>
 
