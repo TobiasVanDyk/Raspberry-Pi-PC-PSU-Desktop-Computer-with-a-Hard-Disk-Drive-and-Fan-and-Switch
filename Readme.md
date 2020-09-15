@@ -4,7 +4,7 @@ A second Raspberry Pi built inside an old PC power supply is underway. This will
 
 The audio hat is the Wolfson WM8960 as discussed in two of the other repositories here. The SSD1306 display uses i2c for communication and therefore a four-wire ribbon cable is sufficient to connect it to the Raspberry Pi GPIO connector (Pins SCL, SDA, 3V3 and GND).
 
-A modified python driver for SSD1306 in its 64x48 pixel version is now working after adapting an Adafruit library based on comments from Mike Causer (modified display: SSD1306_COLUMNADDR, SSD1306_PAGEADDR), and Luma Oled (modified SETDISPLAYCLOCKDIV, SETMULTIPLEX, SETCOMPINS. 
+A modified python driver for SSD1306 in its 64x48 pixel version is functional after adapting an Adafruit library based on comments from Mike Causer (modified display: SSD1306_COLUMNADDR, SSD1306_PAGEADDR), and Luma Oled driver (modified SETDISPLAYCLOCKDIV, SETMULTIPLEX, SETCOMPINS. 
 
 As an example of the SSD1306 python driver refer to [**scroller1.py**](SSD1306Python64x48/scroller1.py) - this requires audacious to be running so that audtool can fetch the current song info and scroll it across the display.
 
