@@ -330,8 +330,8 @@ while True:
     draw.rectangle((0,0,width-1,height-1), outline=1, fill=0)
     time.sleep(1)
 
-    draw.text((2, 0),       "ABC123",  font=font, fill=255)
-    draw.text((2, 12),     "1234567890", font=font, fill=255)
+    draw.text((2, 0),       "songscroll",  font=font, fill=255)
+    draw.text((2, 12),      "audacious", font=font, fill=255)
 
     # Display image.
     disp.dim(True)           # No effect?
@@ -352,8 +352,8 @@ while True:
     
     offset = 0
     n = len(songinfo) - 1
-    print(n)
-    print(width)
+    #print(n)
+    #print(width)
     while offset<n-9:
         t = ""
         i = 0
