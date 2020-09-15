@@ -6,7 +6,7 @@ The audio hat is the Wolfson WM8960 as discussed in two of the other repositorie
 
 A modified python driver for SSD1306 in its 64x48 pixel version is now working after adapting an Adafruit library based on comments from Mike Causer (modified display: SSD1306_COLUMNADDR, SSD1306_PAGEADDR), and Luma Oled (modified SETDISPLAYCLOCKDIV, SETMULTIPLEX, SETCOMPINS. 
 
-As an example of the SSD1306 python driver refer to scroller1.py - this requires audacious to be running so that audtool can fetch the current song info and scroll it across the display.
+As an example of the SSD1306 python driver refer to [**scroller1.py**](SSD1306Python64x48/scroller1.py) - this requires audacious to be running so that audtool can fetch the current song info and scroll it across the display.
 
 <p align="center">
 <img src="images/newrpipc5.jpg" width="400" />  
