@@ -1,7 +1,7 @@
 ########################################################################################
 # Modified by Tobias van Dyk Sep 2020
 # This program requires audacious to be running so that audtool can fetch the current 
-# song info # which is then scrolled across the top line of the display.
+# song info which is then scrolled across the top line of the display.
 #
 # Copyright (c) 2017 Adafruit Industries
 # Author: Tony DiCola & James DeVito
