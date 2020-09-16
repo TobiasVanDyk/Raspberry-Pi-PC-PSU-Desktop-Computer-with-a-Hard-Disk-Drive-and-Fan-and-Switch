@@ -2,7 +2,7 @@
 
 A second Raspberry Pi built inside an old PC power supply is underway. This will use a fan on top - and the arrangement of the components inside the PC-PSU case is therefore different. A modified (for 64x48 pixels), Adafruit SSD1306 driver or [**Luma Oled for Python**](https://github.com/rm-hull/luma.oled) will be used to display the song or video information on a [**small OLED display**](https://www.robotics.org.za/D1-OLED?search=%20oled) mounted in the front of the case. 
 
-The audio hat is the Wolfson WM8960 as discussed in two of the other repositories here. The SSD1306 display uses i2c for communication and therefore a four-wire ribbon cable is sufficient to connect it to the Raspberry Pi GPIO connector (Pins SCL, SDA, 3V3 and GND).
+The audio hat is the [**Wolfson WM8960**](https://www.robotics.org.za/W15668?search=audio%20hat) as discussed in two of the other repositories here. The SSD1306 display uses i2c for communication and therefore a four-wire ribbon cable is sufficient to connect it to the Raspberry Pi GPIO connector (Pins SCL, SDA, 3V3 and GND).
 
 A modified python driver for SSD1306 in its 64x48 pixel version is functional after adapting an Adafruit library based on comments from Mike Causer (modified display: SSD1306_COLUMNADDR, SSD1306_PAGEADDR), and Luma Oled driver (modified SETDISPLAYCLOCKDIV, SETMULTIPLEX, SETCOMPINS. 
 
