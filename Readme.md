@@ -19,14 +19,14 @@ As an example of the SSD1306 python driver refer to [**scroller1.py**](SSD1306Py
 <img src="images/topfanfinal2.jpg" width="400" />  
 </p>
 
-For more details please refer to the two [**Instructables project 1**](https://www.instructables.com/id/A-Rasberry-Pi-PC-PSU-Desktop-Computer-With-Hard-Di/) or [**Instructables project 2**](https://www.instructables.com/id/Raspberry-Pi-DAC-Hat-Case-From-PVC-Wall-Box/)
-
 ### Previous build 2018
 I grew tired of connecting all the peripherals to my Raspberry Pi 3 or 4, every time I wanted to use it. I decided I wanted a Raspberry Pi computer permanently connected to a power supply, hard disk for the root file system and data, a large fan that can rotate slowly and quietly, and a monitor and speakers. Recently I also added a PiFi DAC (PCM5122) - there is space above the Pi and below the hdd or ssd for this type of hat. See the section at the end for configuration details for this DAC.
 
 In addition it is not a good idea to run a Pi for an extended period from an SD Card - these have a limited write cycle (about 10,000 times?) and I therefore decided to investigate other ways to run the Pi.
 
 The photos shows the completed Pi case connected to a small monitor, stereo speakers, and a wireless combo-keyboard trackpad, and Hayley Westenra singing Scarborough Fair using the Rasbian and omxplayer's video hardware acceleration. I later added a PCM5122 DAC Hat (see picture below), and the four photos below show the result.
+
+For more details please refer to the two [**Instructables project 1**](https://www.instructables.com/id/A-Rasberry-Pi-PC-PSU-Desktop-Computer-With-Hard-Di/) or [**Instructables project 2**](https://www.instructables.com/id/Raspberry-Pi-DAC-Hat-Case-From-PVC-Wall-Box/)
 
 <p align="left">
 <img src="images/DACOn1.jpg" width="400" />  
