@@ -1,6 +1,6 @@
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
-A second Raspberry Pi built inside an old PC power supply is underway. This will use a fan on top - and the arrangement of the components inside the PC-PSU case is therefore different. A modified (for 64x48 pixels), Adafruit SSD1306 driver or [**Luma Oled for Python**](https://github.com/rm-hull/luma.oled) will be used to display the song or video information on a [**small OLED display**](https://www.robotics.org.za/D1-OLED?search=%20oled) mounted in the front of the case. 
+A second Raspberry Pi built inside an old PC power supply had been built. This uses a fan on top - and the arrangement of the components inside the PC-PSU case is therefore different. A modified (for 64x48 pixels), Adafruit SSD1306 driver or [**Luma Oled for Python**](https://github.com/rm-hull/luma.oled) will be used to display the song or video information on a [**small OLED display**](https://www.robotics.org.za/D1-OLED?search=%20oled) mounted in the front of the case. 
 
 The i2s audio hat is the [**Wolfson WM8960**](https://www.robotics.org.za/W15668?search=audio%20hat) as discussed in two of the other repositories here. The SSD1306 display uses i2c for communication and therefore a four-wire ribbon cable is sufficient to connect it to the Raspberry Pi GPIO connector (Pins SCL, SDA, 3V3 and GND).
 
@@ -11,21 +11,17 @@ As an example of the SSD1306 python driver refer to [**scroller1.py**](SSD1306Py
 *Todo: A persistent second line of the display will be used to show the Raspberry Pi 5 volt supply voltage using either an ATtiny85 as ADC - communicating via i2c with the Raspberry Pi, or an MCP3002 dual channel 10-bit SPI ADC. The Raspberry Pi CPU temperature and the case fan RPM will be shown permanently on the third line of the display. Both these lines will be on for 1 second out of 5 to prevent OLED burn-in.*
 
 <p align="center">
-<img src="images/newrpipc4.jpg" width="400" />  
-<img src="images/newrpipc1.jpg" width="400" />  
+<img src="images/topfanfinal1" width="400" />  
+<img src="images/topfanfinal4" width="400" />  
 </p>
 <p align="center">
-<img src="images/newrpipc5.jpg" width="400" />  
-<img src="images/newrpipc2.jpg" width="400" />  
-</p>
-
-<p align="center">
-<img src="images/photo-3.jpg" width="400" />  
-<img src="images/photo-2.jpg" width="400" />  
+<img src="images/topfanfinal3" width="400" />  
+<img src="images/topfanfinal2" width="400" />  
 </p>
 
 For more details please refer to the two [**Instructables project 1**](https://www.instructables.com/id/A-Rasberry-Pi-PC-PSU-Desktop-Computer-With-Hard-Di/) or [**Instructables project 2**](https://www.instructables.com/id/Raspberry-Pi-DAC-Hat-Case-From-PVC-Wall-Box/)
 
+### Previous build 2018
 I grew tired of connecting all the peripherals to my Raspberry Pi 3 or 4, every time I wanted to use it. I decided I wanted a Raspberry Pi computer permanently connected to a power supply, hard disk for the root file system and data, a large fan that can rotate slowly and quietly, and a monitor and speakers. Recently I also added a PiFi DAC (PCM5122) - there is space above the Pi and below the hdd or ssd for this type of hat. See the section at the end for configuration details for this DAC.
 
 In addition it is not a good idea to run a Pi for an extended period from an SD Card - these have a limited write cycle (about 10,000 times?) and I therefore decided to investigate other ways to run the Pi.
