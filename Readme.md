@@ -11,12 +11,12 @@ As an example of the SSD1306 python driver refer to [**scroller1.py**](SSD1306Py
 *Todo: A persistent second line of the display will be used to show the Raspberry Pi 5 volt supply voltage using either an ATtiny85 as ADC - communicating via i2c with the Raspberry Pi, or an MCP3002 dual channel 10-bit SPI ADC. The Raspberry Pi CPU temperature and the case fan RPM will be shown permanently on the third line of the display. Both these lines will be on for 1 second out of 5 to prevent OLED burn-in.*
 
 <p align="center">
-<img src="images/topfanfinal1" width="400" />  
-<img src="images/topfanfinal4" width="400" />  
+<img src="images/topfanfinal1.jpg" width="400" />  
+<img src="images/topfanfinal4.jpg" width="400" />  
 </p>
 <p align="center">
-<img src="images/topfanfinal3" width="400" />  
-<img src="images/topfanfinal2" width="400" />  
+<img src="images/topfanfinal3.jpg" width="400" />  
+<img src="images/topfanfinal2.jpg" width="400" />  
 </p>
 
 For more details please refer to the two [**Instructables project 1**](https://www.instructables.com/id/A-Rasberry-Pi-PC-PSU-Desktop-Computer-With-Hard-Di/) or [**Instructables project 2**](https://www.instructables.com/id/Raspberry-Pi-DAC-Hat-Case-From-PVC-Wall-Box/)
