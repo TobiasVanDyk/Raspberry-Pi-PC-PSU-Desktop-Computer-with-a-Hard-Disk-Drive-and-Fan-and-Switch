@@ -19,6 +19,17 @@ As an example of the SSD1306 python driver refer to [**scroller1.py**](SSD1306Py
 <img src="images/topfanfinal2.jpg" width="400" />  
 </p>
 
+<p align="center">
+<img src="images/newrpipc1.jpg" width="250" />  
+<img src="images/newrpipc2.jpg" width="250" /> 
+<img src="images/newrpipc3.jpg" width="250" />  
+</p>
+
+<p align="center">
+<img src="images/newrpipc4.jpg" width="400" />  
+<img src="images/newrpipc5.jpg" width="400" /> 
+</p>
+
 ### Previous build 2018
 I grew tired of connecting all the peripherals to my Raspberry Pi 3 or 4, every time I wanted to use it. I decided I wanted a Raspberry Pi computer permanently connected to a power supply, hard disk for the root file system and data, a large fan that can rotate slowly and quietly, and a monitor and speakers. Recently I also added a PiFi DAC (PCM5122) - there is space above the Pi and below the hdd or ssd for this type of hat. See the section at the end for configuration details for this DAC.
 
