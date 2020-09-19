@@ -22,11 +22,7 @@ from PIL import ImageDraw
 from PIL import ImageFont
 
 import subprocess
-
-import logging
-
 import Adafruit_GPIO as GPIO
-
 
 # Constants
 SSD1306_I2C_ADDRESS = 0x3C    # 011110+SA0+RW - 0x3C or 0x3D
@@ -66,8 +62,8 @@ SSD1306_VERTICAL_AND_RIGHT_HORIZONTAL_SCROLL = 0x29
 SSD1306_VERTICAL_AND_LEFT_HORIZONTAL_SCROLL = 0x2A
 
 def GetTemp():
-        temp = os.popen("vcgencmd measure_temp").readline()
-        return (temp.replace("temp="," T: ").replace("'C\n"," C"))
+    temp = os.popen("vcgencmd measure_temp").readline()
+    return (temp.replace("temp="," T: ").replace("'C\n"," C"))
 
 
 class SSD1306Base(object):
