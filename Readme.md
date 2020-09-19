@@ -6,9 +6,9 @@ The i2s audio hat is the [**Wolfson WM8960**](https://www.robotics.org.za/W15668
 
 A modified python driver for SSD1306 in its 64x48 pixel version is functional after adapting an Adafruit library based on comments from Mike Causer (modified display: SSD1306_COLUMNADDR, SSD1306_PAGEADDR), and Luma Oled driver (modified SETDISPLAYCLOCKDIV, SETMULTIPLEX, SETCOMPINS. 
 
-As an example of the SSD1306 python driver refer to [**scroller4.py**](SSD1306Python64x48/scroller1.py) - this will scroll the current song in audacious (via audtool).
+As an example of the SSD1306 python driver refer to [**scroller4.py**](SSD1306Python64x48/scroller1.py) - this will scroll the current song in audacious (via audtool). The Raspberry Pi CPU temperature is displayed on the second line of the display. 
 
-*Todo: A persistent second line of the display will be used to show the Raspberry Pi 5 volt supply voltage using either an ATtiny85 as ADC - communicating via i2c with the Raspberry Pi, or an MCP3002 dual channel 10-bit SPI ADC. The Raspberry Pi CPU temperature and the case fan RPM will be shown permanently on the third line of the display. Both these lines will be on for 1 second out of 5 to prevent OLED burn-in.*
+*Todo: A persistent third line of the display will be used to show the Raspberry Pi 5 volt supply voltage using either an ATtiny85 as ADC - communicating via i2c with the Raspberry Pi, or an MCP3002 dual channel 10-bit SPI ADC. Both the second and third lines will be on for 1 second out of 5 to prevent OLED burn-in.*
 
 <p align="center">
 <img src="images/topfanfinal1.jpg" width="400" />  
