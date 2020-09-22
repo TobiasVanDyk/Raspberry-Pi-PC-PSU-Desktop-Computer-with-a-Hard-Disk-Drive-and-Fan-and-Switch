@@ -8,7 +8,7 @@ A modified python driver for SSD1306 in its 64x48 pixel version is functional af
 
 As an example of the SSD1306 python driver refer to [**scroller4.py**](SSD1306Python64x48/scroller4.py) - this will scroll the current song in audacious (via audtool). The Raspberry Pi CPU temperature is displayed on the second line of the display. To have it start on boot add it as the last line in .bashrc. For example: python3 /home/pi/shared/scroller.py
 
-*Todo: A persistent third line of the display will be used to show the Raspberry Pi 5 volt supply voltage using either an ATtiny85 as ADC - communicating via i2c with the Raspberry Pi, or an MCP3002 dual channel 10-bit SPI ADC. Both the second and third lines will be on for 1 second out of 5 to prevent OLED burn-in.*
+*Todo: A persistent third line of the display will be used to show the Raspberry Pi 5 volt supply voltage using either an ATtiny85 as ADC - communicating via i2c with the Raspberry Pi, or an MCP3002 dual channel 10-bit SPI ADC. Both the second and third lines will be on for 1 second out of 5 to prevent OLED burn-in. Remove the need to import the may deprecated Adafruit Github libraries such as Adafruit_GPIO and Adafruit_BBIO etc.*
 
 <p align="center">
 <img src="images/topfanfinal1.jpg" width="400" />  
