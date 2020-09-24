@@ -2,6 +2,10 @@
 
 A second Raspberry Pi housed inside an old PC power supply case, had been built. This uses a fan on top - and the arrangement of the components inside the PC-PSU case is therefore different. A modified (for 64x48 pixels), Adafruit SSD1306 driver or [**Luma Oled for Python**](https://github.com/rm-hull/luma.oled) will be used to display the song or video information on a [**small OLED display**](https://www.robotics.org.za/D1-OLED?search=%20oled) mounted in the front of the case. 
 
+The Raspberry Pi is connected to three storage devices: (1) the original 32GB sdcard that now only serves as a boot partition, (2) A 240GB M.2 SSD connected through a M.2 to USB3 adapter card [**NexStar SX M.2 SSD to USB 3.0 Enclosure**](https://www.vantecusa.com/products_detail.php?p_id=214), and (3) a 1TB 2.5" hdd connected through an SATA to USBC converter [**ORICO 2.5 inch Transparent Type-C Hard Drive Enclosure**](http://my.orico.cc/goods.php?id=6352). Only the circuit borad is used from the Orico enclosure the plstic case is not used. For more detail refer to the images below.
+
+The small sdcard boot partition is used to select through the cmdline.txt to select which ssd or hdd root partition to boot. Each of the SSD/HDD has two 50GB root partitions and the rest of the space is a data partition on each. The two root partitions on the hdd is a mirror (backup) of each of the two ssd root partitions.
+
 The i2s audio hat is the [**Wolfson WM8960**](https://www.robotics.org.za/W15668?search=audio%20hat) as discussed in two of the other repositories here. The SSD1306 display uses i2c for communication and therefore a four-wire ribbon cable is sufficient to connect it to the Raspberry Pi GPIO connector (Pins SCL, SDA, 3V3 and GND).
 
 A modified python driver for SSD1306 in its 64x48 pixel version is functional after adapting an Adafruit library based on comments from Mike Causer (modified display: SSD1306_COLUMNADDR, SSD1306_PAGEADDR), and Luma Oled driver (modified SETDISPLAYCLOCKDIV, SETMULTIPLEX, SETCOMPINS. 
@@ -28,6 +32,11 @@ As an example of the SSD1306 python driver refer to [**scroller4.py**](SSD1306Py
 <p align="center">
 <img src="images/newrpipc4.jpg" width="400" />  
 <img src="images/newrpipc5.jpg" width="400" /> 
+</p>
+
+<p align="center">
+<img src="images/m2ssd1.jpg" width="400" />  
+<img src="images/m2ssd2.jpg" width="400" /> 
 </p>
 
 ### Previous build 2018
