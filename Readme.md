@@ -19,12 +19,9 @@ As an example of the SSD1306 python driver refer to [**scroller8.py**](SSD1306Py
 *Todo: A persistent third line of the display will be used to show the Raspberry Pi 5 volt supply voltage using either an ATtiny85 as ADC - communicating via i2c with the Raspberry Pi, or an MCP3002 dual channel 10-bit SPI ADC. Both the second and third lines will be on for 1 second out of 5 to prevent OLED burn-in. Remove the need to import the may deprecated Adafruit Github libraries such as Adafruit_GPIO and Adafruit_BBIO etc.*
 
 <p align="center">
-<img src="images/topfanfinal1.jpg" width="400" />  
-<img src="images/topfanfinal4.jpg" width="400" />  
-</p>
-<p align="center">
-<img src="images/topfanfinal3.jpg" width="400" />  
-<img src="images/topfanfinal2.jpg" width="400" />  
+<img src="images/topfanfinal1.jpg" width="250" />  
+<img src="images/topfanfinal4.jpg" width="250" /> 
+<img src="images/topfanfinal3.jpg" width="250" /> 
 </p>
 
 <p align="center">
@@ -34,8 +31,9 @@ As an example of the SSD1306 python driver refer to [**scroller8.py**](SSD1306Py
 </p>
 
 <p align="center">
-<img src="images/newrpipc4.jpg" width="400" />  
-<img src="images/newrpipc5.jpg" width="400" /> 
+<img src="images/topfanfinal2.jpg" width="250" />  
+<img src="images/newrpipc4.jpg" width="250" />  
+<img src="images/newrpipc5.jpg" width="250" /> 
 </p>
 
 <p align="center">
