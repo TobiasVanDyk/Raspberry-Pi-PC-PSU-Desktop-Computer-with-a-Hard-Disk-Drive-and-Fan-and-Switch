@@ -74,7 +74,7 @@ Using a USB 3 interface did result in faster boot and response times (such as wh
 ### Parts List
 
 <p align="left">
-<img src="images/photo-3.jpg.jpg" width="550" />  
+<img src="images/photo-3.jpg" width="550" />  
 <br>
  
 * Raspberry Pi 3 or 4
@@ -94,7 +94,7 @@ Using a USB 3 interface did result in faster boot and response times (such as wh
 
 ### Construction and Connections
 <p align="left">
-<img src="images/photo-4.jpg.jpg" width="550" />  
+<img src="images/photo-4.jpg" width="550" />  
 <br>
 
 An old computer PSU case seemed to be a convenient size to house the Pi, its power supply, and a stripped external USB hard disk. There was not enough space in the PSU case to mount the external hdd with its case - I therefore opened it and only kept the small circuit board attached to the hdd. I also added a power switch plus USB sockets on the front and back, and it had space for a large fan to keep everything cool, and I made provision for a DAC hat to be fitted should I acquire one. I used a 12v 3A AC-DC power supply as the main PSU, and added two smaller adjustable 5v and 7v for the fan, DC-DC PSU's.
@@ -104,7 +104,7 @@ The photo shows all the components when partially assembled in the PSU case. I m
 The other photos show the completed Pi case connected to a small monitor, stereo speakers, and a wireless combo keyboard track pad, and the completed case from various angles.
 
 <p align="left">
-<img src="images/photo-12.jpg.jpg" width="550" />  
+<img src="images/photo-12.jpg" width="550" />  
 <br>
 
 If you look at the photo above you can see that I have connected two wires (brown and white) directly to the raspberry Pi 3 or 4 GPIO pins. In this case the Pi 3 or 4 is powered directly via its GPIO pins 2 or 4 are +5v, pin 6 (and others) for ground - but note that you must triple-check that you are supplying no more than about 5.2 volt to those pins as by doing this you're bypassing the poly-fuse protection. I used Pins 2 for +5v and the pin next to it for Ground. As I am supplying the Pi through two regulated power supplies - first 12v and then 5.1v, I was satisfied with the direct supply connection.
