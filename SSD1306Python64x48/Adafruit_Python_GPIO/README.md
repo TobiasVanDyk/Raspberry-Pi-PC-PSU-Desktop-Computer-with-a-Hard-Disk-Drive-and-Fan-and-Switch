@@ -1,8 +1,7 @@
 # Modified 96x64 display
 
-Modified for D1 Mini 96x64 OLED SSD1306 on Raspberry Pi 4 and RaspiOs 
-Removed all install requirements python modules not required for this i2c display
-Otherwise modules such as Adafruit_BBIO are installed
+Modified for D1 Mini 96x64 OLED SSD1306 on Raspberry Pi 4 and RaspiOs. Removed all install requirements python modules not required for this i2c display - otherwise modules such as Adafruit_BBIO are installed.
+
 Tobias van Dyk 24 Sep 2020
 
 !!!Deprecation Warning!!!
