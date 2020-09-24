@@ -198,7 +198,7 @@ from the Settings Menu: Change Password, set Locale, WiFi country, Keyboard, Tim
 
 You can then do updates:<br>
 sudo apt-get update<br>
-sudo apt-get upgrade -y<br>
+sudo apt-get full-upgrade -y<br>
 sudo apt-get dist-upgrade -y<br>
 sudo apt-get autoremove
 
