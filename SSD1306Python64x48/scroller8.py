@@ -1,7 +1,7 @@
-########################################################################################
+##############################################################################################
 # Modified by Tobias van Dyk Sep 2020
-# This program requires audacious to be running so that audtool can fetch the current 
-# song info which is then scrolled across the top line of the display.
+# For a scroll display this module requires audacious to be running so that audtool can fetch 
+# the current song info, which is then scrolled across the top line of the display.
 #
 # Copyright (c) 2017 Adafruit Industries
 # Author: Tony DiCola & James DeVito
@@ -12,7 +12,7 @@
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so.
-#######################################################################################
+##############################################################################################
 
 import time
 import os
