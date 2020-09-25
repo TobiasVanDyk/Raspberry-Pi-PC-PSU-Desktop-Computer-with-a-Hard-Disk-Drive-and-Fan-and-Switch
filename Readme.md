@@ -201,15 +201,13 @@ sudo reboot
 ```
 After rebooting check again with df -h if /dev/sda1 is now listed as the root /
 
-Now you must do the initial Raspberry Pi setup that was skipped at the start using the Raspberry Pi configuration Tool
-from the Settings Menu: Change Password, set Locale, WiFi country, Keyboard, Timezone - you will need to reboot
-
-You can then do updates:
+You can then do updates if not done at setup:
 ```
 sudo apt-get update 
 sudo apt-get full-upgrade -y 
 sudo apt-get dist-upgrade -y 
 sudo apt-get autoremove
+sudo apt-get autoclean
 ```
 
 If problem with missing pcakages try to re-run the first 2 commands and also try 
