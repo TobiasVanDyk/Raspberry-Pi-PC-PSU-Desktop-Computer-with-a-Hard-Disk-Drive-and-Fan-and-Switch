@@ -2,8 +2,8 @@
 
 <<COMMENT
 A sequence of shell scripts to 
-1. Transfer the root partition to a hdd or ssd and create a data partiition
-2. Update Raspbian
+1. Transfer the root partition to a hdd or ssd and create a data partition
+2. Update Raspberry Pi OS
 COMMENT
 
 :' 
