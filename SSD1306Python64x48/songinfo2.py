@@ -1,7 +1,8 @@
-############################
-# Working but Adafruit-modified lib preferred
-# See scroller1.py
-############################
+##################################
+# Working module
+# Adafruit-modified lib preferred
+# See scroller.py
+#################################
 import os
 import sys
 import time
