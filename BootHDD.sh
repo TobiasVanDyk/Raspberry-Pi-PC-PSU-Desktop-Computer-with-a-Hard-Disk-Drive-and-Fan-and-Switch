@@ -13,7 +13,7 @@ by creating two partitions: A small 20GB to 100GB partition which will hold the 
 that fills the rest of the drive which wil be used for user data.
 Do not format or mount the partitions - they will both be formatted as ext4.
 Attach the HDD/SSD to the Raspberry Pi via a USB to SATA converter or take out the circuit board from a an external USB converter.
-Make a bootable sd card with newest Raspbian June 2019 image and boot Pi - say CANCEL when new setup procedure shows. 
+Make a bootable sd card with newest Raspberry Pi Os Aug 2020 image and boot Pi - complete the new setup procedure. 
 '
 
 # Change config.txt 
@@ -46,12 +46,9 @@ sudo reboot
 
 # After rebooting check again with df -h if /dev/sda1 is now listed as the root /
 
-# Now you must do the initial Raspberry Pi setup that was skipped at the start using the Raspberry Pi configuration Tool
-# from the Settings Menu: Change Password, set Locale, WiFi country, Keyboard, Timezone - you will need to reboot
-
 # You can then do updates:
 sudo apt-get update
-sudo apt-get upgrade -y
+sudo apt-get full-upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get autoremove
 
