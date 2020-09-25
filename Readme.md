@@ -170,11 +170,13 @@ sudo nano /boot/config.txt
 program_usb_timeout=1<br>
 max_usb_current=1
 
-Raspbian will mount the attached hdd - unmount both partitions then copy the root file system to the first one:<br>
-sudo mke2fs -t ext4 -L rootfs /dev/sda1<br>
-sudo mount /dev/sda1 /mnt<br>
-df -h<br>
-sudo rsync -axv / /mnt<br>
+Raspbian will mount the attached hdd - unmount both partitions then copy the root file system to the first one:
+```
+sudo mke2fs -t ext4 -L rootfs /dev/sda1
+sudo mount /dev/sda1 /mnt
+df -h
+sudo rsync -axv / /mnt
+```
 
 Also format the second partition:<br>
 sudo mke2fs -t ext4 -L rootfs /dev/sda2<br>
