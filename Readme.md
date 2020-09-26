@@ -161,14 +161,9 @@ Do not format or mount the partitions - they will both be formatted as ext4, or 
 
 Attach the HDD/SSD to the Raspberry Pi via the USB to SATA converter or use the circuit board from a an external USB converter. Make a bootable sd card with newest Raspberry Pi OS Aug 2020 image and boot the Pi - complete the setup procedure and reboot. 
 
-Change config.txt sudo nano /boot/config.txt (Press Ctr-O to save and Ctr-X to exit) by adding at bottom: program_usb_timeout=1
-max_usb_current=1
-
-Change config.txt 
-sudo nano /boot/config.txt 
-
-(Press Ctr-O to save and Ctr-X to exit) by adding at bottom of config.txt:<br>
-program_usb_timeout=1<br>
+Change config.txt<br>
+sudo nano /boot/config.txt by adding at bottom:<br>
+program_usb_timeout=1
 max_usb_current=1
 
 Raspbian will mount the attached hdd - unmount both partitions then copy the root file system to the first one:
