@@ -163,7 +163,7 @@ Attach the HDD/SSD to the Raspberry Pi via the USB to SATA converter or use the 
 
 Change config.txt<br>
 sudo nano /boot/config.txt by adding at bottom:<br>
-program_usb_timeout=1
+program_usb_timeout=1<br>
 max_usb_current=1
 
 Raspbian will mount the attached hdd - unmount both partitions then copy the root file system to the first one:
