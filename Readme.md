@@ -33,9 +33,10 @@ As an example of the SSD1306 python driver refer to [**scroller.py**](SSD1306Pyt
 </p>
 
 <p align="center">
-<img src="images/newrpipc5.jpg" width="250" /> 
-<img src="images/m2ssd1.jpg" width="250" />  
-<img src="images/m2ssd2.jpg" width="250" /> 
+<img src="images/newrpipc5.jpg" width="200" /> 
+<img src="images/m2ssd1.jpg" width="200" />  
+<img src="images/m2ssd2.jpg" width="200" /> 
+<img src="images/OricoUSBCEnclosure.jpg" width="200" />  
 </p>
 
 ### Previous build 2018
