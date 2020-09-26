@@ -14,7 +14,7 @@ The SSD1306 display - [**D1 ESP8266 OLED Shield**](https://www.robotics.org.za/D
 
 To install the requirements for the modified driver copy Adafruit_Python_GPIO (which is inside the SSD1306Python64x48 folder here), anywhere under /home/pi, and then run sudo python setup.py install, and sudo python3 setup.py install from within the folder. The much smaller modified SSD1306 driver is not separate, and is part of the scroller module (scroller123..9.py).
 
-As an example of the SSD1306 python driver refer to [**scroller.py**](SSD1306Python64x48/scroller.py) - this will scroll the current song in audacious (via audtool). The Raspberry Pi CPU temperature is displayed on the second line of the display. To have it start on boot add it as the last line in .bashrc. For example: python3 /home/pi/shared/scroller.py
+As an example of the SSD1306 python driver refer to [**scroller.py**](SSD1306Python64x48/scroller.py) - this will scroll the current song in audacious (via audtool). The Raspberry Pi CPU temperature is displayed on the second line of the display. To have it start on boot add it as the last line in .bashrc. For example: python3 /home/pi/shared/scroller.py. Python 3 is required because of statements such as t += chr(c).
 
 *Todo: A persistent third line of the display will be used to show the Raspberry Pi 5 volt supply voltage using either an ATtiny85 as ADC - communicating via i2c with the Raspberry Pi, or an MCP3002 dual channel 10-bit SPI ADC. Both the second and third lines will be on for 1 second out of 5 to prevent OLED burn-in. Remove the need to import the may deprecated Adafruit Github libraries such as Adafruit_GPIO and Adafruit_BBIO etc.*
 
