@@ -8,6 +8,12 @@ Only the Orico interface PCB is used from the enclosure - the plastic case is no
 
 The small sdcard boot partition is used to select through the boot partition's cmdline.txt, which ssd (sda1 or sda2), or hdd (sdb1 or sdb2), root partition to boot. Each of the SSD/HDD drives has two 50GB root partitions and the rest of the space is a data partition (sda3 and sdb3), on each. The two root partitions on the hdd is a mirror (backup) of each of the two ssd root partitions. Fstab is modified for ssd use by adding noatime,nodiratime to the ssd partitions mounted.
 
+`Because the USB-C port on the Rapsberry Pi 4B is now not used for power, it can be used either in host-mode (i.e. used for keyboards, mice, flash drives or external hddd), or in device-mode (i.e. OTG or gadget mode).` In this casee the USB C port ws put into host mode by adding `dtoverlay=dwc2,dr_mode=host` to /boot/config.txt. It was tested successfully by mounting a 1TB notebook drive using a USB-C to USB micro cable.
+
+As long as you are not using it for power input, the USB-C port works wonderfully as both a device and host port. If you want the USB port to boot up in host mode, put this in config.txt:
+
+dtoverlay=dwc2,dr_mode=host
+
 The i2s audio hat is the [**Wolfson WM8960**](https://www.robotics.org.za/W15668?search=audio%20hat) as discussed in [**other repositories**](https://github.com/TobiasVanDyk/RaspberryPi-GPIO-Audio) here. It is connected to a front panel headphone socket, and a rear panel line out. The separate stereo Class D speaker outputs is also available on the rear panel. 
 
 The SSD1306 display - [**D1 ESP8266 OLED Shield**](https://www.robotics.org.za/D1-OLED) - on the front panel uses i2c for communication and therefore a four-wire ribbon cable is sufficient to connect it to the Raspberry Pi GPIO connector (Pins SCL, SDA, 3V3 and GND). A modified python driver for SSD1306 in its 64x48 pixel version is functional after adapting an Adafruit library based on comments from Mike Causer (modified display: SSD1306_COLUMNADDR, SSD1306_PAGEADDR), and Luma Oled driver (modified SETDISPLAYCLOCKDIV, SETMULTIPLEX, SETCOMPINS. This display was used because of its small physical size but if the size of the front panel opening is not a consideration it will be easier to use a slightly larger, standard 128x64 or 128x32 OLED display. In that case the unmodified Adafruit SSD1306 python driver library can be used. 
