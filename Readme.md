@@ -8,7 +8,7 @@ Only the Orico interface PCB is used from the enclosure - the plastic case is no
 
 The small sdcard boot partition is used to select through the boot partition's cmdline.txt, which ssd (sda1 or sda2), or hdd (sdb1 or sdb2), root partition to boot. Each of the SSD/HDD drives has two 50GB root partitions and the rest of the space is a data partition (sda3 and sdb3), on each. The two root partitions on the hdd is a mirror (backup) of each of the two ssd root partitions. Fstab is modified for ssd use by adding noatime,nodiratime to the ssd partitions mounted.
 
-`Because the USB-C port on the Rapsberry Pi 4B is now not used for power, it can be used either in host-mode (i.e. used for keyboards, mice, flash drives or external hddd), or in device-mode (i.e. OTG or gadget mode).` In this casee the USB C port ws put into host mode by adding `dtoverlay=dwc2,dr_mode=host` to /boot/config.txt. It was tested successfully by mounting a 1TB notebook drive using a USB-C to USB micro cable.
+`Because the USB-C port on the Rapsberry Pi 4B is now not used for power, it can be used either in host-mode (i.e. used for keyboards, mice, flash drives or external hdd), or in device-mode (i.e. OTG or gadget mode).` In this case the USB C port ws put into host mode by adding `dtoverlay=dwc2,dr_mode=host` to /boot/config.txt. It was tested successfully by mounting a 1TB notebook drive using a USB-C to USB micro cable.
 
 As long as you are not using it for power input, the USB-C port works wonderfully as both a device and host port. If you want the USB port to boot up in host mode, put this in config.txt:
 
