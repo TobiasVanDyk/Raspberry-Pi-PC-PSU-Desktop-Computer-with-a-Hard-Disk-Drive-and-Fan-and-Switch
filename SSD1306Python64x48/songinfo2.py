@@ -2,7 +2,11 @@
 # Working module
 # Adafruit-modified lib preferred
 # See scroller.py
-#################################
+########################################################
+# The MIT License (MIT)
+# Copyright (c) 2014-2020 Richard Hull and contributors
+########################################################
+
 import os
 import sys
 import time
