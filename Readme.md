@@ -8,6 +8,14 @@ Only the Orico interface PCB is used from the enclosure - the plastic case is no
 
 The small sdcard boot partition is used to select through the boot partition's cmdline.txt, which ssd (sda1 or sda2), or hdd (sdb1 or sdb2), root partition to boot. Each of the SSD/HDD drives has two 50GB root partitions and the rest of the space is a data partition (sda3 and sdb3), on each. The two root partitions on the hdd is a mirror (backup) of each of the two ssd root partitions. Fstab is modified for ssd use by adding noatime,nodiratime to the ssd partitions mounted.
 
+`A common problem when using mutiple storage devices is that pcmanfm consumes 25% of the cpu (or 100% of one of four cores), even when the computer is idle.` Compare htop in the first and second picture below. This only happens when the root filesystem is on a hdd or aan ssd - not when it is on a SDcard. When the boot partition is on an SDCard and the root partition on an hdd or ssd then the excessive cpu usage is observed. Many solutions have been suggested, and some work for a limited time such as removing the @ in front of the pcmanfm in xdge autostart, using a local autostart, keeping and SDCard in the slot, etc. What worked for me on two different Raspberry Pi 4Bs with both SSD and HDD storage, is to edit the volume and removable disk, mount preferences for the file manager, as shown below in the third picture. 
+
+<p align="center">
+<img src="images/pcmanfm3.jpg" width="250" /> 
+<img src="images/pcmanfm2.jpg" width="250" />  
+<img src="images/pcmanfm1.jpg" width="250" /> 
+</p>
+
 `Because the USB-C port on the Rapsberry Pi 4B is now not used for power, it can be used either in host-mode (i.e. used for keyboards, mice, flash drives or external hdd), or in device-mode (i.e. OTG or gadget mode).` In this case the USB C port ws put into host mode by adding `dtoverlay=dwc2,dr_mode=host` to /boot/config.txt. It was tested successfully by mounting a 1TB notebook drive using a USB-C to USB-A micro cable.
 
 The i2s audio hat is the [**Wolfson WM8960**](https://www.robotics.org.za/W15668?search=audio%20hat) as discussed in [**other repositories**](https://github.com/TobiasVanDyk/RaspberryPi-GPIO-Audio) here. It is connected to a front panel headphone socket, and a rear panel line out. The separate stereo Class D speaker outputs is also available on the rear panel. 
