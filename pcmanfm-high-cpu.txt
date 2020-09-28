@@ -1,0 +1,5 @@
+https://www.linuxquestions.org/questions/linux-software-2/cpu-constantly-50-also-pcmanfm-constantly-respawning-4175426588/
+https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=246670&p=1506294&hilit=ssd+boot+htop#p1506294
+https://www.raspberrypi.org/forums/viewtopic.php?f=63&t=266127&p=1617113&hilit=ssd+boot+htop#p1617113
+https://www.raspberrypi.org/forums/viewtopic.php?f=66&t=275982&p=1672149&hilit=pcmanfm+htop&sid=7bde4eaf1537dc6696e086dfc7afb2fa#p1672149
+https://www.raspberrypi.org/forums/viewtopic.php?f=91&t=267872&p=1626216&hilit=pcmanfm+htop&sid=7bde4eaf1537dc6696e086dfc7afb2fa#p1626216
