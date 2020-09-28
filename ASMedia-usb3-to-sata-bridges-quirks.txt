@@ -1,6 +1,9 @@
 Hans de Goede 2015-06-11 08:08:01 UTC 
+
 https://bugzilla.redhat.com/show_bug.cgi?id=1230336
-Josh, I'm afraid it is not as simple as adding a quirk, the asmedia usb3<->sata bridges are very populair, and only the first generation has issues. Unfortunately one usb-id is used for all generations, so we have this beautiful code in the kernel to figure out what to do:
+
+Josh, I'm afraid it is not as simple as adding a quirk, the asmedia usb3<->sata bridges are very populair, and only the first generation has issues. 
+Unfortunately one usb-id is used for all generations, so we have this beautiful code in the kernel to figure out what to do:
 
         /*
          * ASMedia has a number of usb3 to sata bridge chips, at the time of
