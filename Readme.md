@@ -17,7 +17,7 @@ The small sdcard boot partition is used to select through the boot partition's c
 </p>
 <br>
 
-`Because the USB-C port on the Rapsberry Pi 4B is now not used for power, it can be used either in host-mode (i.e. used for keyboards, mice, flash drives or external hdd), or in device-mode (i.e. OTG or gadget mode).` In this case the USB C port ws put into host mode by adding `dtoverlay=dwc2,dr_mode=host` to /boot/config.txt. It was tested successfully by mounting a 1TB notebook drive using a USB-C to USB-A micro cable.
+`Because the USB-C port on the Rapsberry Pi 4B is now not used for power, it can be used either in host-mode (i.e. used for keyboards, mice, flash drives or external hdd), or in device-mode (i.e. OTG or gadget mode).` In this case the USB C port was configured for USB-C host mode by adding `dtoverlay=dwc2,dr_mode=host` to /boot/config.txt. It was tested successfully by mounting a 1TB notebook drive using a USB-C to USB-A micro cable.
 
 The i2s audio hat is the [**Wolfson WM8960**](https://www.robotics.org.za/W15668?search=audio%20hat) as discussed in [**other repositories**](https://github.com/TobiasVanDyk/RaspberryPi-GPIO-Audio) here. It is connected to a front panel headphone socket, and a rear panel line out. The separate stereo Class D speaker outputs is also available on the rear panel. 
 
