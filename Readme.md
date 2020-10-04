@@ -1,7 +1,7 @@
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
 <p align="center">
-<img src="images/topfanfinal1.jpg" width="400" />  
+<img src="images/topfanfinal1.jpg" width="420" />  
 <img src="images/m2ssd1.jpg" width="400" />     
 </p>
 
