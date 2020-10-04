@@ -2,7 +2,7 @@
 
 <p align="center">
 <img src="images/topfanfinal1.jpg" width="420" />  
-<img src="images/m2ssd1.jpg" width="400" />     
+<img src="images/m2ssd1.jpg" width="395" />     
 </p>
 
 A second Raspberry Pi housed inside a PC power supply case had been built. This uses a fan on top - and the arrangement of the components inside the PC-PSU case is therefore different. A modified (for 64x48 pixels), [**Adafruit SSD1306 driver**](https://github.com/adafruit/Adafruit_Python_SSD1306) or [**Luma Oled for Python**](https://github.com/rm-hull/luma.oled) will be used to display the song or video information on a [**small OLED display**](https://www.robotics.org.za/D1-OLED?search=%20oled) mounted in the front of the case. For the Luma driver refer to [**songinfo2.py**](SSD1306Python64x48/songinfo2.py) inside the SSD1306Python64x48 folder here. The smaller, modified Adafruit SSD1306 library will be used for future development.
