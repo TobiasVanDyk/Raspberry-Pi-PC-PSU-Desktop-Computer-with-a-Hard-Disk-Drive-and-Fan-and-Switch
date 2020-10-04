@@ -1,5 +1,10 @@
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
+<p align="center">
+<img src="images/topfanfinal1.jpg" width="400" />  
+<img src="images/m2ssd1.jpg" width="400" />     
+</p>
+
 A second Raspberry Pi housed inside a PC power supply case had been built. This uses a fan on top - and the arrangement of the components inside the PC-PSU case is therefore different. A modified (for 64x48 pixels), [**Adafruit SSD1306 driver**](https://github.com/adafruit/Adafruit_Python_SSD1306) or [**Luma Oled for Python**](https://github.com/rm-hull/luma.oled) will be used to display the song or video information on a [**small OLED display**](https://www.robotics.org.za/D1-OLED?search=%20oled) mounted in the front of the case. For the Luma driver refer to [**songinfo2.py**](SSD1306Python64x48/songinfo2.py) inside the SSD1306Python64x48 folder here. The smaller, modified Adafruit SSD1306 library will be used for future development.
 
 A Raspberry Pi 4B is connected to three storage devices: (1) the original 32GB sdcard that now only serves as a boot partition, (2) a 240GB M.2 Western Digital SSD connected through an M.2 to USB3 adapter card - [**NexStar SX M.2 SSD to USB 3.0 Enclosure**](https://www.vantecusa.com/products_detail.php?p_id=214), and (3) a 1TB 2.5" Toshiba hdd connected through a SATA to USBC converter - [**ORICO 2.5 inch Transparent Type-C Hard Drive Enclosure**](http://my.orico.cc/goods.php?id=6352). The M.2 to USB3 converter use an ASMedia chipset which can mean it will do UAS without errors - or maybe not: refer to [**this bugzilla.redhat snippet from Hans de Goede about 5 years ago**](ASMedia-usb3-to-sata-bridges-quirks.txt). It is the same [**Hans de Goede**](https://github.com/TobiasVanDyk/gkrellm-uguru-for-GKrellM2) mentioned here regarding 2005 Abit uguru motherboard drivers for lmsensors. SATA to USB3 chipsets that have broken UAS support (which is essential for SSD TRIM operations), can often be partially (a) corrected by keeping them in the Raspberry Pi 4B USB3 hub but then only using the two USB2 data lines, as compared to when using them in the Raspberry Pi 4B USB2 hub. (a): This is then at a big loss in throughput.
@@ -30,10 +35,9 @@ As an example of the SSD1306 python driver refer to [**scroller.py**](SSD1306Pyt
 *Todo: A persistent third line of the display will be used to show the Raspberry Pi 5 volt supply voltage using either an ATtiny85 as ADC - communicating via i2c with the Raspberry Pi, or an MCP3002 dual channel 10-bit SPI ADC. Both the second and third lines will be on for 1 second out of 5 to prevent OLED burn-in. Remove the need to import the may deprecated Adafruit Github libraries such as Adafruit_GPIO and Adafruit_BBIO etc.*
 
 <p align="center">
-<img src="images/topfanfinal1.jpg" width="200" />  
-<img src="images/topfanfinal4.jpg" width="200" /> 
-<img src="images/topfanfinal3.jpg" width="200" /> 
-<img src="images/newrpipc1.jpg" width="200" />   
+<img src="images/topfanfinal4.jpg" width="250" /> 
+<img src="images/topfanfinal3.jpg" width="250" /> 
+<img src="images/newrpipc1.jpg" width="250" />   
 </p>
 
 <p align="center">
@@ -44,10 +48,9 @@ As an example of the SSD1306 python driver refer to [**scroller.py**](SSD1306Pyt
 </p>
 
 <p align="center">
-<img src="images/newrpipc5.jpg" width="200" /> 
-<img src="images/m2ssd1.jpg" width="200" />  
-<img src="images/m2ssd2.jpg" width="200" /> 
-<img src="images/OricoUSBCEnclosure.jpg" width="200" />  
+<img src="images/newrpipc5.jpg" width="250" /> 
+<img src="images/m2ssd2.jpg" width="250" /> 
+<img src="images/OricoUSBCEnclosure.jpg" width="250" />  
 </p>
 
 ### Previous build 2018
