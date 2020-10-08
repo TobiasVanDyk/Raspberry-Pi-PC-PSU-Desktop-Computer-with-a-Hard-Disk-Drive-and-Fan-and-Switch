@@ -37,14 +37,14 @@ As an example of the SSD1306 python driver refer to [**scroller.py**](SSD1306Pyt
 The three M.2 SATA SSD to USB adapters that have been used with a Raspberry Pi 4B are as shown in the table below:
 
 | Manufacturer | Chipset         | USB VID:PID | Cable Interface | Name and Link                                   |
-|:-------------|:----------------|:------------|:----------------|:------------------------------------------=-----|
+|:-------------|:----------------|:------------|:----------------|:------------------------------------------------|
 | Vantec       | ASMedia ASM1153 | 174c : 55aa | USB 3.0 Micro B | [NexStar SX NST-M2STS3-BK](https://www.vantecusa.com/products_detail.php?p_id=214) |
 | Boabab       | JMicro JMS578   | 152d : 0578 | USB 3.0 Micro B | [Baobab M.2 NGFF To USB3.0 Enclosure](https://baobabit.co.za/index.php?route=product/product&path=249&product_id=455) |	       
 | Unitek       | VIA VL817       | 2109 : 0715 | USB C           | [Unitek M.2 SSD (NGFF/SATA) Aluminium Enclosure](https://www.unitek-products.com/products/usb3-0-m-2-ssd-ngff-sata-aluminium-enclosure) | 
 
 <p align="center">
 <img src="images/Vantec.jpg" width="250" /> 
-<img src="images/Baobab.jpg" width="250" /> 
+<img src="images/Baobab.jpeg" width="250" /> 
 <img src="images/Unitek.jpg" width="250" />   
 </p>
 
