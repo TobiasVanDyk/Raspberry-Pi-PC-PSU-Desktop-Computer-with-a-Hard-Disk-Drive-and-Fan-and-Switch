@@ -34,7 +34,7 @@ To install the [**requirements**](https://github.com/adafruit/Adafruit_Python_GP
 
 As an example of the SSD1306 python driver refer to [**scroller.py**](SSD1306Python64x48/scroller.py) - this will scroll the current song in audacious (via audtool). The Raspberry Pi CPU temperature is displayed on the second line of the display. To have it start on boot add it as the last line in .bashrc. For example: python3 /home/pi/shared/scroller.py - python 3 is required.
 
-The three M.2 SATA SSD to USB adapters that have been used with a Raspberry Pi 4B are as shown in the table below:
+The three M.2 SATA SSD to USB adapters that have been used with a Raspberry Pi 4B are as shown in the table below and in the three pictures left to right:
 
 | Manufacturer | Chipset         | USB VID:PID | Cable Interface | Name and Link                                   |
 |:-------------|:----------------|:------------|:----------------|:------------------------------------------------|
