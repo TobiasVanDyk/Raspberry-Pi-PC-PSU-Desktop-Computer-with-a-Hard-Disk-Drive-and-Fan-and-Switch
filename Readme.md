@@ -38,9 +38,9 @@ The three M.2 SATA SSD to USB adapters that have been used with a Raspberry Pi 4
 
 | Manufacturer | Chipset         | USB VID:PID | Cable Interface |
 |:-------------|:----------------|:------------|:----------------|
-| Vantec       | ASMedia ASM1153 | 174c:55aa   | USB 3.0 Micro B |
-| Boabab       | JMicro JMS578   | 152d:0578   | USB 3.0 Micro B | 	       
-| Unitek       | VIA VL817       | 2109:0715   | USB C           | 
+| Vantec       | ASMedia ASM1153 | 174c : 55aa | USB 3.0 Micro B |
+| Boabab       | JMicro JMS578   | 152d : 0578 | USB 3.0 Micro B | 	       
+| Unitek       | VIA VL817       | 2109 : 0715 | USB C           | 
 
 
 *Todo: A persistent third line of the display will be used to show the Raspberry Pi 5 volt supply voltage using either an ATtiny85 as ADC - communicating via i2c with the Raspberry Pi, or an MCP3002 dual channel 10-bit SPI ADC. Both the second and third lines will be on for 1 second out of 5 to prevent OLED burn-in. Remove the need to import the may deprecated Adafruit Github libraries such as Adafruit_GPIO and Adafruit_BBIO etc.*
