@@ -36,11 +36,11 @@ As an example of the SSD1306 python driver refer to [**scroller.py**](SSD1306Pyt
 
 The three M.2 SATA SSD to USB adapters that have been used with a Raspberry Pi 4B are as shown in the table below:
 
-| Manufacturer | Chipset         | USB VID:PID | Cable Interface |
-|:-------------|:----------------|:------------|:----------------|
-| Vantec       | ASMedia ASM1153 | 174c : 55aa | USB 3.0 Micro B |
-| Boabab       | JMicro JMS578   | 152d : 0578 | USB 3.0 Micro B | 	       
-| Unitek       | VIA VL817       | 2109 : 0715 | USB C           | 
+| Manufacturer | Chipset         | USB VID:PID | Cable Interface | Name and Link                                  |
+|:-------------|:----------------|:------------|:----------------|:-----------------------------------------------|
+| Vantec       | ASMedia ASM1153 | 174c : 55aa | USB 3.0 Micro B | [NexStar SX NST-M2STS3-BK](https://www.vantecusa.com/products_detail.php?p_id=214) |
+| Boabab       | JMicro JMS578   | 152d : 0578 | USB 3.0 Micro B | [Baobab M.2 NGFF To USB3.0 Enclosure](https://baobabit.co.za/index.php?route=product/product&path=249&product_id=455) |	       
+| Unitek       | VIA VL817       | 2109 : 0715 | USB C           | [USB3.0 M.2 SSD (NGFF/SATA) Aluminium Enclosure](https://www.unitek-products.com/products/usb3-0-m-2-ssd-ngff-sata-aluminium-enclosure) | 
 
 
 *Todo: A persistent third line of the display will be used to show the Raspberry Pi 5 volt supply voltage using either an ATtiny85 as ADC - communicating via i2c with the Raspberry Pi, or an MCP3002 dual channel 10-bit SPI ADC. Both the second and third lines will be on for 1 second out of 5 to prevent OLED burn-in. Remove the need to import the may deprecated Adafruit Github libraries such as Adafruit_GPIO and Adafruit_BBIO etc.*
