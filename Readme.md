@@ -296,7 +296,7 @@ If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with 
 In another build, I used an inexpensive Wall Light Switch Box as a Raspberry Pi and DAC Hat case with space to include a Power Switch as well.
 
 <p align="center">
-<img src="images/pi4pcm5122ssd.jpg" width="400" />  
+<img src="images/pi4pcm5122ssd.jpg" width="390" />  
 <img src="images/p1.jpg" width="350" />  
 </p>
 
@@ -380,15 +380,7 @@ The Pi is mounted on four short 5mm spacers. The top of the wall box was made fr
 
 The PiFi DAC+ is an inexpensive substitute for the HiFi Berry Pi DAC+ Hat and can be configured in exactly the same way on the Raspberry Pi running Raspbian Stretch - replace the line dtparam=audio=on from /boot/config.txt if with dtoverlay=hifiberry-dacplus. 
 
-<p align="center">
-<img src="images/p0.jpg" width="400" />  
-<img src="images/p1.jpg" width="400" />  
-</p>
 
-<p align="center">
-<img src="images/p2.jpg" width="400" />  
-<img src="images/p7.jpg" width="400" />  
-</p>
 
 
 
