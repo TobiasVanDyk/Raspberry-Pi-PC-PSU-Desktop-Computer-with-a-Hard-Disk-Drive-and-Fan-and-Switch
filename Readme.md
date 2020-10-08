@@ -48,7 +48,7 @@ The three M.2 SATA SSD to USB adapters that have been used with a Raspberry Pi 4
 <img src="images/Unitek.jpg" width="250" />   
 </p>
 
-The ASmedia ASM1153 and VIA VL817 both work at full USB 3 speed with UAS enabled, whilst the JMicro JMS578 needs a quirks entry in cmdline.txt to disable UAS. For more information see [Raspberry Pi 4 USB Boot Config Guide for SSD / Flash Drives](https://jamesachambers.com/raspberry-pi-4-usb-boot-config-guide-for-ssd-flash-drives/).
+The ASmedia ASM1153 and VIA VL817 both work at full USB 3 speed with UAS enabled, whilst the JMicro JMS578 needs a [quirks entry in cmdline.txt](https://www.raspberrypi.org/forums/viewtopic.php?p=1494113#p1494113) to disable UAS. For more information see [Raspberry Pi 4 USB Boot Config Guide for SSD / Flash Drives](https://jamesachambers.com/raspberry-pi-4-usb-boot-config-guide-for-ssd-flash-drives/).
 
 *Todo: A persistent third line of the display will be used to show the Raspberry Pi 5 volt supply voltage using either an ATtiny85 as ADC - communicating via i2c with the Raspberry Pi, or an MCP3002 dual channel 10-bit SPI ADC. Both the second and third lines will be on for 1 second out of 5 to prevent OLED burn-in. Remove the need to import the may deprecated Adafruit Github libraries such as Adafruit_GPIO and Adafruit_BBIO etc.*
 
