@@ -296,7 +296,7 @@ If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with 
 In another build, I used an inexpensive Wall Light Switch Box as a Raspberry Pi and DAC Hat case with space to include a Power Switch as well.
 
 <p align="center">
-<img src="images/pi4pcm5122ssd.jpg" width="350" />  
+<img src="images/pi4pcm5122ssd.jpg" width="400" />  
 <img src="images/p1.jpg" width="350" />  
 </p>
 
