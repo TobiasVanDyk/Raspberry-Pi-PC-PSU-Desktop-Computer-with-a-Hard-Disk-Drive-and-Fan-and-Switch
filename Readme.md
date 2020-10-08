@@ -43,7 +43,7 @@ The three M.2 SATA SSD to USB adapters that have been used with a Raspberry Pi 4
 | Unitek       | VIA VL817       | 2109 : 0715 | USB C           | [Unitek M.2 SSD (NGFF/SATA) Aluminium Enclosure](https://www.unitek-products.com/products/usb3-0-m-2-ssd-ngff-sata-aluminium-enclosure) | 
 
 <p align="center">
-<img src="images/Vantec.jpeg" width="250" /> 
+<img src="images/Vantec.jpg" width="250" /> 
 <img src="images/Baobab.jpeg" width="250" /> 
 <img src="images/Unitek.jpg" width="250" />   
 </p>
