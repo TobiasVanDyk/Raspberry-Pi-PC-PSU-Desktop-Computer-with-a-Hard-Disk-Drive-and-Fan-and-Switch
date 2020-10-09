@@ -293,18 +293,7 @@ If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with 
 <img src="images/photo-11.jpg" width="320" />  
 </p>
 
-In another build, I used an inexpensive Wall Light Switch Box as a Raspberry Pi and DAC Hat case with space to include a Power Switch as well.
-
-<p align="center">
-<img src="images/pi4pcm5122ssd.jpg" width="390" />  
-<img src="images/p1.jpg" width="350" />  
-</p>
-
-<p align="center">
-<img src="images/p0.jpg" width="250" /> 
-<img src="images/p2.jpg" width="250" />  
-<img src="images/p7.jpg" width="250" />  
-</p>
+**In another build, I used an inexpensive Wall Light Switch Box as a Raspberry Pi and DAC Hat case with space to include a Power Switch as well.**
 
 The Raspberry Pi 3 has a board dimension of 56mm wide and 85mm long and I recently discovered that my PiFi Plus DAC hat and the Raspberry Pi will fit into an inexpensive (less than $ 0.50) PVC plastic electrical household wall box used to mount light switches - the one I bought had an outside dimension of 105mm x 60mm x 45mm, and on the inside it was 56mm wide and 101mm long - this means the Pi board will fit (tightly).
 
@@ -324,7 +313,18 @@ The case has a large round opening on the side opposite to the four USB connecto
 
 The ventilation seems to be adequate without a fan or a heatsink for the Pi - after an hour of playing flac and mp3 files the CPU temperature varied between 49 and 51 degrees Celsius. There is space to fit a small fan underneath the top cover in the section above the Pi's USB connectors - a fan such as those used for hdd coolers would be suitable and some will operate silently if powered from 5 volt instead of 12 volt.
 
-I intend to use this Pi DAC Box with a 1 TB notebook drive to play music through my stereo amplifier and I must still configure VNC on the Pi and VNC Viewer on a PC, so that I can use the Pi headless from a Windows PC to play music.
+<p align="center">
+<img src="images/pi4pcm5122ssd.jpg" width="390" />  
+<img src="images/p1.jpg" width="350" />  
+</p>
+
+<p align="center">
+<img src="images/p0.jpg" width="250" /> 
+<img src="images/p2.jpg" width="250" />  
+<img src="images/p7.jpg" width="250" />  
+</p>
+
+I intend to use this Pi DAC Box with a 1 TB notebook drive to play music through my stereo amplifier and I must still configure VNC on the Pi and VNC Viewer on a PC, so that I can use the Pi headless from a Windows PC to play music. Currently I am using an SSD in an M.2 to USB 3 converter.
 
 I recently upgraded the Pi in the DAC box to the Pi 3B+ and I decided it should now occupy a permanent place in my living room as an audio file player. I used Audacious as the Audio player on the Pi
 
