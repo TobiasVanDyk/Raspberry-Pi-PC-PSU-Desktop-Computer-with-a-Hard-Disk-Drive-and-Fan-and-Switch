@@ -315,14 +315,14 @@ The ventilation seems to be adequate without a fan or a heatsink for the Pi - af
 
 <p align="center">
 <img src="images/alizee3.jpg" width="250" /> 
-<img src="images/pi4pcm5122ssd.jpg" width="250" />  
-<img src="images/p1.jpg" width="250" />  
+<img src="images/pi4pcm5122ssd.jpg" width="450" />  
 </p>
 
 <p align="center">
-<img src="images/p0.jpg" width="250" /> 
-<img src="images/p2.jpg" width="250" />  
-<img src="images/p7.jpg" width="250" />  
+<img src="images/p1.jpg" width="200" /> 
+<img src="images/p0.jpg" width="200" /> 
+<img src="images/p2.jpg" width="200" />  
+<img src="images/p7.jpg" width="200" />  
 </p>
 
 I intend to use this Pi DAC Box with a 1 TB notebook drive to play music through my stereo amplifier and I must still configure VNC on the Pi and VNC Viewer on a PC, so that I can use the Pi headless from a Windows PC to play music. Currently I am using an SSD in an M.2 to USB 3 converter.
