@@ -314,8 +314,9 @@ The case has a large round opening on the side opposite to the four USB connecto
 The ventilation seems to be adequate without a fan or a heatsink for the Pi - after an hour of playing flac and mp3 files the CPU temperature varied between 49 and 51 degrees Celsius. There is space to fit a small fan underneath the top cover in the section above the Pi's USB connectors - a fan such as those used for hdd coolers would be suitable and some will operate silently if powered from 5 volt instead of 12 volt.
 
 <p align="center">
-<img src="images/pi4pcm5122ssd.jpg" width="390" />  
-<img src="images/p1.jpg" width="350" />  
+<img src="images/alizee3.jpg" width="250" /> 
+<img src="images/pi4pcm5122ssd.jpg" width="250" />  
+<img src="images/p1.jpg" width="250" />  
 </p>
 
 <p align="center">
