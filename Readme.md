@@ -311,7 +311,7 @@ This socket can be used in one of two ways:
 
 The case has a large round opening on the side opposite to the four USB connectors. This is used for ventilation, and also as a window to the Pi's two status lights (red and green), but most importantly the Pi's SD card can be removed and inserted through this hole using a tweezer.
 
-For the Pi 4B this large opening on the side was used for a small 5v fan - examine picture images/alizee3.jpg - the fan is just visble on the righthan side of the Pi4 Case. Because it blows air inbetween the AudioDAc hat and the Pi4 PCB top it is effective in keeping the temperature around 40 degrees Celsius.
+For the Pi 4B this large opening on the side was used for a small 5v fan - examine the [picture](images/alizee3.jpg) - the fan is just visble on the righthan side of the Pi4 Case. Because it blows air inbetween the AudioDAc hat and the Pi4 PCB top it is effective in keeping the temperature around 40 degrees Celsius.
 
 The ventilation seems to be adequate without a fan or a heatsink for the Pi - after an hour of playing flac and mp3 files the CPU temperature varied between 49 and 51 degrees Celsius. There is space to fit a small fan underneath the top cover in the section above the Pi's USB connectors - a fan such as those used for hdd coolers would be suitable and some will operate silently if powered from 5 volt instead of 12 volt.
 
