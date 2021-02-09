@@ -341,7 +341,7 @@ I recently upgraded the Pi in the DAC box to the Pi 4B and I decided it should n
 
 I partitioned the 500GB SSD into four partitions - three 50GB primary partitions for the raspberry pi root file system, and the rest as a 350GB FAT32 partition which holds video and the audio files and various Raspberry Pi related documents. Doing it this way enables me to plug the ssd into another computer and then synchronize it with my music and video collection, and Raspberry Pi documentation on the windows computer. I still use the SD card on the Pi but only as the boot partition.
 
-The reason why I made three 50GB partitions is because I use the same SSD for two different Pi computers. The one use /dev/sda1 as its root file system, and the other /dev/sda2. The SDCard boot cmdline.txt then refers to /dev/sda1 and /dev/sda2 respectively. 
+The reason why I made three 50GB partitions is because I use the same SSD for two different Pi computers - this one with the Audio DAC and also a [**Raspberry Pi 400**](https://github.com/TobiasVanDyk/TobiasVanDyk). The one use /dev/sda1 as its root file system, and the other /dev/sda2. The SDCard boot cmdline.txt then refers to /dev/sda1 and /dev/sda2 respectively. 
 
 <p align="left">
 <img src="images/SSDuse3Pi4Bs.png" width="500" />  
