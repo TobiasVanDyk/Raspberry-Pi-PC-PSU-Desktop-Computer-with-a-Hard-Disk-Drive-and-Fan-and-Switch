@@ -295,7 +295,7 @@ If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with 
 
 **In another build, I used an inexpensive Wall Light Switch Box as a Raspberry Pi and DAC Hat case with space to include a Power Switch as well.**
 
-The Raspberry Pi 3 has a board dimension of 56mm wide and 85mm long and I recently discovered that my PiFi Plus DAC hat and the Raspberry Pi will fit into an inexpensive (less than $ 0.50) PVC plastic electrical household wall box used to mount light switches - the one I bought had an outside dimension of 105mm x 60mm x 45mm, and on the inside it was 56mm wide and 101mm long - this means the Pi board will fit (tightly).
+The Raspberry Pi 3 and Pi 4, has a board dimension of 56mm wide and 85mm long and I recently discovered that my PiFi Plus DAC hat and the Raspberry Pi will fit into an inexpensive (less than $ 0.50) PVC plastic electrical household wall box used to mount light switches - the one I bought had an outside dimension of 105mm x 60mm x 45mm, and on the inside it was 56mm wide and 101mm long - this means the Pi board will fit (tightly).
 
 The PiFiDAC+ can be obtained from itead.cc or from banggood or from seeedstudio.com for about $6 to $35.
 
@@ -305,11 +305,13 @@ I included a power switch for the Pi on the front panel - this is directly conne
 
 This socket can be used in one of two ways:
 
-1. Use the normal Pi micro-USB connector to supply power to the Pi - the barrel connector will then output +5v to for example a notebook hard disk power supply.
+1. Use the normal Pi micro-USB or USB-C connector to supply power to the Pi - the barrel connector will then output +5v to for example a notebook hard disk power supply.
 
-2. Use the barrel connector to supply power to the Pi directly.
+2. Use the barrel connector to supply 5.1v power to the Pi directly through its GPIO pins.
 
 The case has a large round opening on the side opposite to the four USB connectors. This is used for ventilation, and also as a window to the Pi's two status lights (red and green), but most importantly the Pi's SD card can be removed and inserted through this hole using a tweezer.
+
+For the Pi 4B this large opening on the side was used for a small 5v fan - examine picture images/alizee3.jpg - the fan is just visble on the righthan side of the Pi4 Case. Because it blows air inbetween the AudioDAc hat and the Pi4 PCB top it is effective in keeping the temperature around 40 degrees Celsius.
 
 The ventilation seems to be adequate without a fan or a heatsink for the Pi - after an hour of playing flac and mp3 files the CPU temperature varied between 49 and 51 degrees Celsius. There is space to fit a small fan underneath the top cover in the section above the Pi's USB connectors - a fan such as those used for hdd coolers would be suitable and some will operate silently if powered from 5 volt instead of 12 volt.
 
