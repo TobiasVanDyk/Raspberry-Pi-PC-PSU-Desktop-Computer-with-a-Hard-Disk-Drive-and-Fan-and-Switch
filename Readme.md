@@ -320,7 +320,7 @@ The case has a large round opening on the side opposite to the four USB connecto
 
 The ventilation seems to be adequate without a fan or a heatsink for the **Pi 3B+** - after an hour of playing flac and mp3 files the CPU temperature varied between 49 and 51 degrees Celsius. There is space to fit a small fan underneath the top cover in the section above the Pi's USB connectors - a fan such as those used for hdd coolers would be suitable and some will operate silently if powered from 5 volt instead of 12 volt.
 
-For the **Pi 4B** the large opening on the side (opposte to the USB sockets side), was used for mounting a small 5v fan - examine this [**picture**](images/alizee3.jpg) - the fan is just visble on the right-hand side of the Pi4 Case. Because it blows air inbetween the AudioDAC hat and the Pi4 PCB top it is effective in keeping the temperature below about 45 degrees Celsius.
+For the **Pi 4B** the large opening on the side (opposite to the USB sockets side), was used for mounting a small 5v fan - examine this [**picture**](images/alizee3.jpg) - the fan is just visble on the right-hand side of the Pi4 Case. Because it blows air inbetween the AudioDAC hat and the Pi4 PCB top it is effective in keeping the temperature below about 45 degrees Celsius.
 
 <p align="center">
 <img src="images/alizee3.jpg" width="250" /> 
