@@ -291,12 +291,12 @@ If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with 
 
 <p align="center">
 <img src="images/photo-7.jpg" width="400" />  
-<img src="images/photo-8.jpg" width="400" />  
+<img src="images/photo-10.jpg" width="400" />  
 </p>
 
 <p align="center">
 <img src="images/photo-9.jpg" width="320" />  
-<img src="images/photo-10.jpg" width="320" />  
+<img src="images/photo-8.jpg" width="320" />  
 <img src="images/photo-11.jpg" width="320" />  
 </p>
 
