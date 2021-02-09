@@ -342,6 +342,10 @@ I partitioned the 500GB SSD into four partitions - three 50GB primary partitions
 
 The reason why I made three 50GB partitions is because I use the same SSD for two different Pi computers. The one use /dev/sda1 as its root file system, and the other /dev/sda2. The SDCard boot cmdline.txt then refers to /dev/sda1 and /dev/sda2 respectively. 
 
+<p align="left">
+<img src="images/SSDuse3Pi4Bs.png" width="500" />  
+</p>
+
 The Pi is mounted on four short 5mm spacers. The top of the wall box was made from a sheet of thin 0.9mm white ABS plastic which can be easily cut and drilled. Please refer to the series of photos for more details on how to mount the Pi and its DAC hat.
 
 The PiFi DAC+ is an inexpensive substitute for the HiFi Berry Pi DAC+ Hat and can be configured in exactly the same way on the Raspberry Pi running Raspbian Stretch - replace the line dtparam=audio=on from /boot/config.txt if with dtoverlay=hifiberry-dacplus. 
