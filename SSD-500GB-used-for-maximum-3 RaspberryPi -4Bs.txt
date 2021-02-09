@@ -1,0 +1,19 @@
+
+
+SSD 500GB in M.2 USB3 Case
+3 primary and one extended partition
+Used for 2 Raspberry Pi 4Bs
+|-------------|-------------|------------|-------------|
+| P1     sda1 | P2     sda2 | P3    sda3 | E1     sda5 |
+|        ext4 |        ext4 |       ext4 |       fat32 |
+|             |             |            |             |
+| Rpi 4B #1   | Rpi 4B #2   | backups    | common data |
+| root fs     | root fs     | sdcard     | audio/video |
+|             |             | rootfs     | documents   |
+|             |             | 3rd Pi 4B  | binaries    |
+|-------------|-------------|------------|-------------|
+
+RPi 4B #1       RPi 4B #1
+SDCard          SDCard
+cmdline.txt     cmdline.txt
+root=/dev/sda1  root=/dev/sda2
