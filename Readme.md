@@ -334,7 +334,8 @@ For the **Pi 4B** the large opening on the side (opposite to the USB sockets sid
 <img src="images/p7.jpg" width="200" />  
 </p>
 
-I intend to use this Pi DAC Box with a 500GB SSD or a 1 TB notebook drive to play music through my stereo amplifier and I must still configure VNC on the Pi and VNC Viewer on a PC, so that I can use the Pi headless from a Windows PC to play music. Because it has a smaller case, I am currently using an SSD in an M.2 to USB 3 converter.
+I intend to use this Pi DAC Box with a 500GB SSD to play music through a small ClassD stereo amplifier - [**at the very top of this picture**](images/alizee3.jpg).
+I used xrdp rather than VNC on the Pi and RDP on the windows PC, so that I can use the Pi headless from a PC to play music. Because it has a smaller case than an external SATS-USB drive, I prefer using an SSD in an M.2 to USB 3 converter.
 
 I recently upgraded the Pi in the DAC box to the Pi 4B and I decided it should now occupy a permanent place in my living room as an audio file player. I used Audacious as the Audio player on the Pi
 
