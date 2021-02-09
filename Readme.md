@@ -318,9 +318,9 @@ This socket can be used in one of two ways:
 
 The case has a large round opening on the side opposite to the four USB connectors. This is used for ventilation, and also as a window to the Pi's two status lights (red and green), but most importantly the Pi's SD card can be removed and inserted through this hole using a tweezer.
 
-The ventilation seems to be adequate without a fan or a heatsink for the [**Pi 3B+**] - after an hour of playing flac and mp3 files the CPU temperature varied between 49 and 51 degrees Celsius. There is space to fit a small fan underneath the top cover in the section above the Pi's USB connectors - a fan such as those used for hdd coolers would be suitable and some will operate silently if powered from 5 volt instead of 12 volt.
+The ventilation seems to be adequate without a fan or a heatsink for the **Pi 3B+** - after an hour of playing flac and mp3 files the CPU temperature varied between 49 and 51 degrees Celsius. There is space to fit a small fan underneath the top cover in the section above the Pi's USB connectors - a fan such as those used for hdd coolers would be suitable and some will operate silently if powered from 5 volt instead of 12 volt.
 
-For the [**Pi 4B**] the large opening on the side (opposte to the USB sockets side), was used for mounting a small 5v fan - examine this [**picture**](images/alizee3.jpg) - the fan is just visble on the right-hand side of the Pi4 Case. Because it blows air inbetween the AudioDAC hat and the Pi4 PCB top it is effective in keeping the temperature below about 45 degrees Celsius.
+For the **Pi 4B** the large opening on the side (opposte to the USB sockets side), was used for mounting a small 5v fan - examine this [**picture**](images/alizee3.jpg) - the fan is just visble on the right-hand side of the Pi4 Case. Because it blows air inbetween the AudioDAC hat and the Pi4 PCB top it is effective in keeping the temperature below about 45 degrees Celsius.
 
 <p align="center">
 <img src="images/alizee3.jpg" width="250" /> 
@@ -338,11 +338,15 @@ I intend to use this Pi DAC Box with a 500GB SSD or a 1 TB notebook drive to pla
 
 I recently upgraded the Pi in the DAC box to the Pi 4B and I decided it should now occupy a permanent place in my living room as an audio file player. I used Audacious as the Audio player on the Pi
 
-I partitioned the 500GB SSD into four partitions - three 50GB primary partitions for the raspberry pi root file system, and the rest as a about 300GB FAT32 partition which holds all the audio files and various Raspberry Pi related documents. Doing it this way enables me to plug the ssd into a windows computer and then synchronize it with my music collection and Raspberry Pi documentation on the windows computer. I still use the SD card on the Pi but only as the boot partition.
+I partitioned the 500GB SSD into four partitions - three 50GB primary partitions for the raspberry pi root file system, and the rest as a 350GB FAT32 partition which holds video and the audio files and various Raspberry Pi related documents. Doing it this way enables me to plug the ssd into another computer and then synchronize it with my music and video collection, and Raspberry Pi documentation on the windows computer. I still use the SD card on the Pi but only as the boot partition.
 
-The reason why I made three 50GB partitions is because I use the same SSD or two different Pi computers. The one use /dev/sda1 as its root file system, and the other /dev/sda2. The SDCard boot cmdline.txt the refers to /dev/sda1 and sda2 respectively. 
+The reason why I made three 50GB partitions is because I use the same SSD for two different Pi computers. The one use /dev/sda1 as its root file system, and the other /dev/sda2. The SDCard boot cmdline.txt then refers to /dev/sda1 and /dev/sda2 respectively. 
 
-Windows has a remote desktop client-server built-in already - mstsc.exe or the Remote Desktop Connection.
+The Pi is mounted on four short 5mm spacers. The top of the wall box was made from a sheet of thin 0.9mm white ABS plastic which can be easily cut and drilled. Please refer to the series of photos for more details on how to mount the Pi and its DAC hat.
+
+The PiFi DAC+ is an inexpensive substitute for the HiFi Berry Pi DAC+ Hat and can be configured in exactly the same way on the Raspberry Pi running Raspbian Stretch - replace the line dtparam=audio=on from /boot/config.txt if with dtoverlay=hifiberry-dacplus. 
+
+Note that Windows also has a remote desktop client-server built-in - mstsc.exe or the Remote Desktop Connection.
 
 On the pi side you must install xrdp as shown below:
 
@@ -387,10 +391,6 @@ To shutdown the pi use:
 
 sudo shutdown
 
-
-The Pi is mounted on four short 5mm spacers. The top of the wall box was made from a sheet of thin 0.9mm white ABS plastic which can be easily cut and drilled. Please refer to the series of photos for more details on how to mount the Pi and its DAC hat.
-
-The PiFi DAC+ is an inexpensive substitute for the HiFi Berry Pi DAC+ Hat and can be configured in exactly the same way on the Raspberry Pi running Raspbian Stretch - replace the line dtparam=audio=on from /boot/config.txt if with dtoverlay=hifiberry-dacplus. 
 
 
 
