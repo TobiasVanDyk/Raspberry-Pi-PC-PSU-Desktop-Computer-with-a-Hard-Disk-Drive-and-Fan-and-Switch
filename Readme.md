@@ -253,12 +253,12 @@ sudo mkdir /mnt/data
 sudo chown pi:pi /mnt/data
 ```
 If the data partition is ext4 use
-/dev/sda2 /mnt/data ext4 default 0 0 to fstab using nano
-in fstab
+<br>/dev/sda2 /mnt/data ext4 default 0 0 
+<br>in fstab
 
 If the data partition is FAT32 then use 
-/dev/sda3 /mnt/data vfat user,defaults,nofail,umask=000 0 0
-in fstab
+<br>/dev/sda3 /mnt/data vfat user,defaults,nofail,umask=000 0 0
+<br>in fstab
 
 ```
 sudo nano /mnt/etc/fstab 
