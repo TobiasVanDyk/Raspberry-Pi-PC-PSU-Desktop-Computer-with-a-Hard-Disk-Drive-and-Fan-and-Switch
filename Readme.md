@@ -15,6 +15,19 @@ Smartmontools is useed to check the condition od the attached SSD/HDD and hdparm
 
 The small sdcard boot partition is used to select through the boot partition's cmdline.txt, which ssd (sda1 or sda2), or hdd (sdb1 or sdb2), root partition to boot. Each of the SSD/HDD drives has two 50GB root partitions and the rest of the space is a data partition (sda3 and sdb3), on each. The two root partitions on the hdd is a mirror (backup) of each of the two ssd root partitions. Fstab is modified for ssd use by adding noatime,nodiratime to the ssd partitions mounted.
 
+**Paspberry Pi 400:** To accommodate three other Raspberry Pi computers such as the Pi 400, whilst using one 500GB SSD, I partitioned the 500GB SSD into four partitions - three 50GB primary partitions for the raspberry pi root file system, and the rest as a 350GB FAT32 partition which holds video and the audio files and various Raspberry Pi related documents. Doing it this way enables me to plug the ssd into another computer and then synchronize it with my music and video collection, and Raspberry Pi documentation on the windows computer. I still use the SD card on the Pi but only as the boot partition.
+
+The reason why I made three 50GB partitions is because I use the same SSD for two different Pi computers - this one with the Audio DAC and also a [**Raspberry Pi 400**](https://github.com/TobiasVanDyk/TobiasVanDyk). The one use /dev/sda1 as its root file system, and the other /dev/sda2. The SDCard boot cmdline.txt then refers to /dev/sda1 and /dev/sda2 respectively. 
+
+I can then plug the drive into a windows PC and 
+(1) Use Macrium Reflect Free to make backups of the ext4 partitions 1 to 3. It is one of the few Windows imaging apps that support ext4 partitions.
+(2) Use the Windows WD SSD Dashboard to run TRIM on the SSD
+(3) Use a synch app to update the data partition from the Windows PC.
+
+<p align="left">
+<img src="images/SSDuse3Pi4Bs.png" width="500" />  
+</p>
+
 `A common problem when using mutiple storage devices is that pcmanfm consumes 25% of the cpu (or 100% of one of four cores), even when the computer is idle.` Compare htop in the first and second picture below. This only happens when the root filesystem is on a hdd or an ssd - not when it is on a SDCard. When the boot partition is on an SDCard and the root partition on a hdd or ssd then the excessive cpu usage is observed. [**Many solutions have been suggested**](pcmanfm-high-cpu.txt), and some work for a limited time such as removing the @ in front of the pcmanfm in /etc/xdg/lxsession/LXDE-pi/autostart, using a local autostart, keeping an sdcard in the slot, etc. What worked for me on two different Raspberry Pi 4Bs with both SSD and HDD storage, is to edit the volume and removable disk mount preferences for the file manager, as shown below in the third picture. 
 
 <p align="center">
@@ -338,19 +351,6 @@ I intend to use this Pi DAC Box with a 500GB SSD to play music through a small C
 I used xrdp rather than VNC on the Pi and RDP on the windows PC, so that I can use the Pi headless from a PC to play music. Because it has a smaller case than an external SATS-USB drive, I prefer using an SSD in an M.2 to USB 3 converter.
 
 I recently upgraded the Pi in the DAC box to the Pi 4B and I decided it should now occupy a permanent place in my living room as an audio file player. I used Audacious as the Audio player on the Pi
-
-I partitioned the 500GB SSD into four partitions - three 50GB primary partitions for the raspberry pi root file system, and the rest as a 350GB FAT32 partition which holds video and the audio files and various Raspberry Pi related documents. Doing it this way enables me to plug the ssd into another computer and then synchronize it with my music and video collection, and Raspberry Pi documentation on the windows computer. I still use the SD card on the Pi but only as the boot partition.
-
-The reason why I made three 50GB partitions is because I use the same SSD for two different Pi computers - this one with the Audio DAC and also a [**Raspberry Pi 400**](https://github.com/TobiasVanDyk/TobiasVanDyk). The one use /dev/sda1 as its root file system, and the other /dev/sda2. The SDCard boot cmdline.txt then refers to /dev/sda1 and /dev/sda2 respectively. 
-
-I can then plug the drive into a windows PC and 
-(1) Use Macrium Reflect Free to make backups of the ext4 partitions 1 to 3. It is one of the few Windows imaging apps that support ext4 partitions.
-(2) Use the WD Dashboard to run TRIM on the SSD
-(3) Use a synch app to update the data partition.
-
-<p align="left">
-<img src="images/SSDuse3Pi4Bs.png" width="500" />  
-</p>
 
 The Pi is mounted on four short 5mm spacers. The top of the wall box was made from a sheet of thin 0.9mm white ABS plastic which can be easily cut and drilled. Please refer to the series of photos for more details on how to mount the Pi and its DAC hat.
 
