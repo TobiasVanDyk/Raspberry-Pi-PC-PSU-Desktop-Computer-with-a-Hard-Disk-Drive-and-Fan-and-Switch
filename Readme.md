@@ -28,8 +28,8 @@ I can then plug the drive into a windows PC and
 <img src="images/SSDuse3Pi4Bs.png" width="600" />  
 </p>
 
-<p align="center">
-<img src="images/pi4pcm5122sda1.jpg" width="250" /> 
+<p align="left">
+<img src="images/pi4pcm5122sda1.jpg" width="220" /> 
 <img src="images/RPi400-sda2.png" width="250" />  
 <img src="images/RPi400-sda2Screen.png" width="250" /> 
 </p>
