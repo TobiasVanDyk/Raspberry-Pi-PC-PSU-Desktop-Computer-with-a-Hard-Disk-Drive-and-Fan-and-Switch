@@ -343,6 +343,11 @@ I partitioned the 500GB SSD into four partitions - three 50GB primary partitions
 
 The reason why I made three 50GB partitions is because I use the same SSD for two different Pi computers - this one with the Audio DAC and also a [**Raspberry Pi 400**](https://github.com/TobiasVanDyk/TobiasVanDyk). The one use /dev/sda1 as its root file system, and the other /dev/sda2. The SDCard boot cmdline.txt then refers to /dev/sda1 and /dev/sda2 respectively. 
 
+I can then plug the drive into a windows PC and 
+(1) Use Macrium Reflect Free to make backups of the ext4 partitions 1 to 3. It is one of the few Windows imaging apps that support ext4 partitions.
+(2) Use the WD Dashboard to run TRIM on the SSD
+(3) Use a synch app to update the data partition.
+
 <p align="left">
 <img src="images/SSDuse3Pi4Bs.png" width="500" />  
 </p>
