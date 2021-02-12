@@ -17,7 +17,7 @@ The small sdcard boot partition is used to select through the boot partition's c
 
 **Raspberry Pi 400:** To accommodate three other Raspberry Pi computers such as the Pi 400, whilst using only one 500GB SSD in an M.2 external enclosure, I partitioned the 500GB SSD into four partitions - three 50GB primary partitions for the raspberry pi root file system, and the rest as a 350GB FAT32 partition which holds video and the audio files and various Raspberry Pi related documents. Doing it this way enables me to plug the SSD into another computer and then synchronize it with my music and video collection and Raspberry Pi documentation, on the other computer. For all three Raspberry Pi computers I stll use an SDCard as the boot partition, and they respectively booot /dev/sda1, /dev/sda2, and /dev/sda3.
 
-The reason why I made three 50GB partitions is because I use the same SSD for three different Pi computers - a Rpi 4B with an Audio DAC (see the very last section here), a [**Raspberry Pi 400**](https://github.com/TobiasVanDyk/TobiasVanDyk), and another RPi sed to test SPI LCD hats. They one use /dev/sda1 to /dev/sda3 as their root file system where the SDCard boot cmdline.txt then refers to these three. 
+The reason why I made three 50GB partitions is because I use the same SSD for three different Pi computers - a Rpi 4B with an Audio DAC (left picture below, and see the last section here), a [**Raspberry Pi 400**](https://github.com/TobiasVanDyk/TobiasVanDyk) (middle and right picture below), and another RPi sed to test SPI LCD hats. They one use /dev/sda1 to /dev/sda3 as their root file system where the SDCard boot cmdline.txt then refers to these three. 
 
 I can then plug the drive into a windows PC and 
 (1) Use Macrium Reflect Free to make backups of the ext4 partitions 1 to 3. It is one of the few Windows imaging apps that support ext4 partitions.
@@ -26,6 +26,12 @@ I can then plug the drive into a windows PC and
 
 <p align="left">
 <img src="images/SSDuse3Pi4Bs.png" width="600" />  
+</p>
+
+<p align="center">
+<img src="images/pi4pcm5122sda1.jpg" width="250" /> 
+<img src="images/RPi400-sda2.png" width="250" />  
+<img src="images/RPi400-sda2Screen.png" width="250" /> 
 </p>
 
 `A common problem when using mutiple storage devices is that pcmanfm consumes 25% of the cpu (or 100% of one of four cores), even when the computer is idle.` Compare htop in the first and second picture below. This only happens when the root filesystem is on a hdd or an ssd - not when it is on a SDCard. When the boot partition is on an SDCard and the root partition on a hdd or ssd then the excessive cpu usage is observed. [**Many solutions have been suggested**](pcmanfm-high-cpu.txt), and some work for a limited time such as removing the @ in front of the pcmanfm in /etc/xdg/lxsession/LXDE-pi/autostart, using a local autostart, keeping an sdcard in the slot, etc. What worked for me on two different Raspberry Pi 4Bs with both SSD and HDD storage, is to edit the volume and removable disk mount preferences for the file manager, as shown below in the third picture. 
