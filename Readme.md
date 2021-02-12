@@ -15,14 +15,12 @@ Smartmontools is useed to check the condition od the attached SSD/HDD and hdparm
 
 The small sdcard boot partition is used to select through the boot partition's cmdline.txt, which ssd (sda1 or sda2), or hdd (sdb1 or sdb2), root partition to boot. Each of the SSD/HDD drives has two 50GB root partitions and the rest of the space is a data partition (sda3 and sdb3), on each. The two root partitions on the hdd is a mirror (backup) of each of the two ssd root partitions. Fstab is modified for ssd use by adding noatime,nodiratime to the ssd partitions mounted.
 
-**Raspberry Pi 400:** To accommodate three other Raspberry Pi computers such as the Pi 400, whilst using only one 500GB SSD in an M.2 external enclosure, I partitioned the 500GB SSD into four partitions - three 50GB primary partitions for the raspberry pi root file system, and the rest as a 350GB FAT32 partition which holds video and the audio files and various Raspberry Pi related documents. Doing it this way enables me to plug the SSD into another computer and then synchronize it with my music and video collection and Raspberry Pi documentation, on the other computer. For all three Raspberry Pi computers I stll use an SDCard as the boot partition, and they respectively booot /dev/sda1, /dev/sda2, and /dev/sda3.
-
-The reason why I made three 50GB partitions is because I use the same SSD for three different Pi computers - a Rpi 4B with an Audio DAC (left picture below, and see the last section here), a [**Raspberry Pi 400**](https://github.com/TobiasVanDyk/TobiasVanDyk) (middle and right picture below), and another RPi sed to test SPI LCD hats. They one use /dev/sda1 to /dev/sda3 as their root file system where the SDCard boot cmdline.txt then refers to these three. 
+**Raspberry Pi 400:** To accommodate three other Raspberry Pi computers such as the Pi 400, whilst using only one 500GB SSD in an M.2 external enclosure, I partitioned the 500GB SSD into four partitions - three 50GB primary partitions for the raspberry pi root file system, and the rest as a 350GB FAT32 partition which holds video and the audio files and various Raspberry Pi related documents. Doing it this way enables me to plug the SSD into another computer and then synchronize it with my music and video collection and Raspberry Pi documentation, on the other computer. For all three Raspberry Pi computers I stll use an SDCard as the boot partition, and they respectively booot /dev/sda1, /dev/sda2, and /dev/sda3. The three different Pi computers are a RPi 4B with an audio DAC (left picture below, and also see the last section), a [**Raspberry Pi 400**](https://github.com/TobiasVanDyk/TobiasVanDyk) (middle and right picture below), and another RPi used to test SPI LCD hats and programing the Pico. 
 
 I can then plug the drive into a windows PC and 
-(1) Use Macrium Reflect Free to make backups of the ext4 partitions 1 to 3. It is one of the few Windows imaging apps that support ext4 partitions.
-(2) Use the Windows WD SSD Dashboard to run TRIM on the SSD
-(3) Use a synch app to update the data partition from the Windows PC.
+1. Use Macrium Reflect Free to make backups of the ext4 partitions 1 to 3. It is one of the few Windows imaging apps that support ext4 partitions.
+2. Use the Windows WD SSD Dashboard to run TRIM on the SSD
+3. Use a synch app to update the data partition from the Windows PC.
 
 <p align="left">
 <img src="images/SSDuse3Pi4Bs.png" width="600" />  
