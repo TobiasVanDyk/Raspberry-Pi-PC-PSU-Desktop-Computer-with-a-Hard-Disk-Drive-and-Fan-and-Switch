@@ -25,7 +25,7 @@ I can then plug the drive into a windows PC and
 (3) Use a synch app to update the data partition from the Windows PC.
 
 <p align="left">
-<img src="images/SSDuse3Pi4Bs.png" width="500" />  
+<img src="images/SSDuse3Pi4Bs.png" width="600" />  
 </p>
 
 `A common problem when using mutiple storage devices is that pcmanfm consumes 25% of the cpu (or 100% of one of four cores), even when the computer is idle.` Compare htop in the first and second picture below. This only happens when the root filesystem is on a hdd or an ssd - not when it is on a SDCard. When the boot partition is on an SDCard and the root partition on a hdd or ssd then the excessive cpu usage is observed. [**Many solutions have been suggested**](pcmanfm-high-cpu.txt), and some work for a limited time such as removing the @ in front of the pcmanfm in /etc/xdg/lxsession/LXDE-pi/autostart, using a local autostart, keeping an sdcard in the slot, etc. What worked for me on two different Raspberry Pi 4Bs with both SSD and HDD storage, is to edit the volume and removable disk mount preferences for the file manager, as shown below in the third picture. 
