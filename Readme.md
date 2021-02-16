@@ -353,7 +353,7 @@ For the **Pi 4B** the large opening on the side (opposite to the USB sockets sid
 </p>
 
 I intend to use this Pi DAC Box with a 500GB SSD to play music through a small ClassD stereo amplifier - [**at the very top of this picture**](images/alizee3.jpg).
-I used xrdp rather than VNC on the Pi and RDP on the windows PC, so that I can use the Pi headless from a PC to play music. Because it has a smaller case than an external SATS-USB drive, I prefer using an SSD in an M.2 to USB 3 converter. Note: Maybe a better alternative for XRDP currently is [**FreeRDP**](https://www.freerdp.com/) or [**FreeRDP Github**](https://github.com/FreeRDP/FreeRDP).
+I used xrdp rather than VNC on the Pi and RDP on the windows PC, so that I can use the Pi headless from a PC to play music. Because it has a smaller case than an external SATS-USB drive, I prefer using an SSD in an M.2 to USB 3 converter. Note that [**FreeRDP**](https://www.freerdp.com/) or [**FreeRDP Github**](https://github.com/FreeRDP/FreeRDP) is another free alternative for XRDP.
 
 I recently upgraded the Pi in the DAC box to the Pi 4B and I decided it should now occupy a permanent place in my living room as an audio file player. I used Audacious as the Audio player on the Pi
 
