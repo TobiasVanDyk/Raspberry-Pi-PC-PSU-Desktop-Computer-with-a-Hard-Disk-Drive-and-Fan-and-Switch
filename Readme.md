@@ -1,8 +1,8 @@
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
 <p align="left">
-<img src="images/topfanfinal1.jpg" width="420" />  
-<img src="images/m2ssd1.jpg" width="395" />     
+<img src="images/topfanfinal1.jpg" width="380" />  
+<img src="images/m2ssd1.jpg" width="350" />     
 </p>
 
 A second Raspberry Pi housed inside a PC power supply case had been built during 2020. This uses a fan on top - and the arrangement of the components inside the PC-PSU case is therefore different. A modified (for 64x48 pixels), [**Adafruit SSD1306 driver**](https://github.com/adafruit/Adafruit_Python_SSD1306) or [**Luma Oled for Python**](https://github.com/rm-hull/luma.oled) is used to display the song or video information on a [**small OLED display**](https://www.robotics.org.za/D1-OLED?search=%20oled) mounted in the front of the case. For the Luma driver refer to [**songinfo2.py**](SSD1306Python64x48/songinfo2.py) inside the SSD1306Python64x48 folder here. The smaller, modified Adafruit SSD1306 library will be used for future development.
@@ -96,7 +96,7 @@ The Orico SATA to USBC converter referred to earlier [**ORICO 2.5 inch Transpare
 **Update September 2021:** The M.2 USB Crucial SSD drive was at last connected with a full-speed cable as shown below.
 
 <p align="left">
-<img src="images/M2FullSpeed1.jpg" width="250" />  
+<img src="images/M2FullSpeed1.jpg" width="300" />  
 <img src="images/M2FullSpeed2.jpg" width="350" /> 
 <br>
 
