@@ -92,6 +92,14 @@ The Orico SATA to USBC converter referred to earlier [**ORICO 2.5 inch Transpare
 </p>
 
 ### Previous build 2018
+
+**Update September 2021:** The M.2 USB Crucial SSD drive was at last connected with a full-speed cable as shown below.
+
+<p align="left">
+<img src="images/M2FullSpeed1.jpg" width="400" />  
+<img src="images/M2FullSpeed2.jpg" width="350" /> 
+<br>
+
 I grew tired of connecting all the peripherals to my Raspberry Pi 3 or 4, every time I wanted to use it. I decided I wanted a Raspberry Pi computer permanently connected to a power supply, hard disk for the root file system and data, a large fan that can rotate slowly and quietly, and a monitor and speakers. Recently I also added a PiFi DAC (PCM5122) - there is space above the Pi and below the hdd or ssd for this type of hat. See the section at the end for configuration details for this DAC.
 
 In addition it is not a good idea to run a Pi for an extended period from an SD Card - these have a limited write cycle (about 10,000 times?) and I therefore decided to investigate other ways to run the Pi.
