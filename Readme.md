@@ -96,7 +96,7 @@ The Orico SATA to USBC converter referred to earlier [**ORICO 2.5 inch Transpare
 **Update September 2021:** The M.2 USB Crucial SSD drive was at last connected with a full-speed cable as shown below.
 
 <p align="left">
-<img src="images/M2FullSpeed1.jpg" width="250 />  
+<img src="images/M2FullSpeed1.jpg" width="250" />  
 <img src="images/M2FullSpeed2.jpg" width="350" /> 
 <br>
 
