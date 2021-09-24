@@ -1,0 +1,83 @@
+pi@raspberrypi:~ $ lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda           8:0    0 232.9G  0 disk 
+├─sda1        8:1    0    50G  0 part 
+├─sda2        8:2    0    50G  0 part /
+└─sda3        8:3    0 132.9G  0 part 
+sdb           8:16   0 931.5G  0 disk 
+├─sdb1        8:17   0  97.7G  0 part 
+└─sdb2        8:18   0 833.9G  0 part /mnt/data
+mmcblk0     179:0    0  29.7G  0 disk 
+├─mmcblk0p1 179:1    0   256M  0 part /boot
+└─mmcblk0p2 179:2    0  29.5G  0 part 
+pi@raspberrypi:~ $ sudo sg_vpd -a /dev/sda
+Supported VPD pages VPD page:
+  Supported VPD pages [sv]
+  Unit serial number [sn]
+  Device identification [di]
+  Block limits (SBC) [bl]
+  Block device characteristics (SBC) [bdc]
+  Logical block provisioning (SBC) [lbpv]
+
+Unit serial number VPD page:
+  Unit serial number: 040987654321
+
+Device Identification VPD page:
+  Addressed logical unit:
+    designator type: NAA,  code set: Binary
+      0x5000000000000001
+
+Block limits VPD page (SBC):
+  Write same non-zero (WSNZ): 0
+  Maximum compare and write length: 0 blocks [Command not implemented]
+  Optimal transfer length granularity: 1 blocks
+  Maximum transfer length: 65535 blocks
+  Optimal transfer length: 65535 blocks
+  Maximum prefetch transfer length: 65535 blocks
+  Maximum unmap LBA count: 4194240
+  Maximum unmap block descriptor count: 1
+  Optimal unmap granularity: 1 blocks
+  Unmap granularity alignment valid: false
+  Unmap granularity alignment: 0 [invalid]
+  Maximum write same length: 0 blocks [not reported]
+  Maximum atomic transfer length: 0 blocks [not reported]
+  Atomic alignment: 0 [unaligned atomic writes permitted]
+  Atomic transfer length granularity: 0 [no granularity requirement
+  Maximum atomic transfer length with atomic boundary: 0 blocks [not reported]
+  Maximum atomic boundary size: 0 blocks [can only write atomic 1 block]
+
+Block device characteristics VPD page (SBC):
+  Non-rotating medium (e.g. solid state)
+  Product type: Not specified
+  WABEREQ=0
+  WACEREQ=0
+  Nominal form factor: 2.5 inch
+  ZONED=0
+  RBWZ=0
+  BOCS=0
+  FUAB=0
+  VBULS=0
+  DEPOPULATION_TIME=0 (seconds)
+
+Logical block provisioning VPD page (SBC):
+  Unmap command supported (LBPU): 1
+  Write same (16) with unmap bit supported (LBPWS): 0
+  Write same (10) with unmap bit supported (LBPWS10): 0
+  Logical block provisioning read zeros (LBPRZ): 0
+  Anchored LBAs supported (ANC_SUP): 0
+  Threshold exponent: 0 [threshold sets not supported]
+  Descriptor present (DP): 0
+  Minimum percentage: 0 [not reported]
+  Provisioning type: 0 (not known or fully provisioned)
+  Threshold percentage: 0 [percentages not supported]
+pi@raspberrypi:~ $ sudo fstrim / --verbose
+/: 40.5 GiB (43475881984 bytes) trimmed
+pi@raspberrypi:~ $ lsusb
+Bus 002 Device 002: ID 174c:55aa ASMedia Technology Inc. Name: ASM1051E SATA 6Gb/s bridge, ASM1053E SATA 6Gb/s bridge, ASM1153 SATA 3Gb/s bridge, ASM1153E SATA 6Gb/s bridge
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 005: ID 046d:c52b Logitech, Inc. Unifying Receiver
+Bus 001 Device 004: ID 1a40:0101 Terminus Technology Inc. Hub
+Bus 001 Device 003: ID 04fc:0c25 Sunplus Technology Co., Ltd SATALink SPIF225A
+Bus 001 Device 002: ID 2109:3431 VIA Labs, Inc. Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+pi@raspberrypi:~ $ 
