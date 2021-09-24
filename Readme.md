@@ -100,6 +100,16 @@ The Orico SATA to USBC converter referred to earlier [**ORICO 2.5 inch Transpare
 <img src="images/M2FullSpeed2.jpg" width="350" /> 
 <br>
 
+To enable SSD TRIM in linux for the ASMedia enclosure used in the two photos as above, follow the procedure here [**Enabling TRIM Support on a Via VL817 USB 3.1 SATA Adaptor**](https://spod.cx/blog/enabling_trim_support_via_VL817_usb_sata_adaptor.shtml):
+1. **lsusb -t** Check that SSD supports **uas**
+2. **sudo apt install sg3-utils** To enable **sg_vpd**
+3. **sudo sg_vpd -a /dev/sda** Where sda is the SSD - check if **Unmap command supported (LBPU): 1** is present
+4. **lsusb** Check chipset vendor and device id's: **ASMEDIA is 174c:55aa and VIA VL817 is 2109:0715**
+5. **sudo nano /etc/udev/rules.d/50-uasp-usb.rules** Add this content and substitute vvvv and dddd with the vendor and device id: ACTION=="add|change", ATTRS{idVendor}=="vvvv", ATTRS{idProduct}=="dddd", SUBSYSTEM=="scsi_disk", ATTR{provisioning_mode}="unmap"
+6. **sudo udevadm control --reload-rules && udevadm trigger** Better to reboot anyway
+7. **sudo fstrim / --verbose**
+Note that I had to update the firmware on the ASMedia SSD enclosures to version **141126_A1_EE_82.bin** using the MPTool.exe before the TRIM command would work. The udev files and history for both the ASMedia and VIA chipsets are uploaded here in the TRIMEnable folder.
+ 
 **2018:**
 I grew tired of connecting all the peripherals to my Raspberry Pi 3 or 4, every time I wanted to use it. I decided I wanted a Raspberry Pi computer permanently connected to a power supply, hard disk for the root file system and data, a large fan that can rotate slowly and quietly, and a monitor and speakers. Recently I also added a PiFi DAC (PCM5122) - there is space above the Pi and below the hdd or ssd for this type of hat. See the section at the end for configuration details for this DAC.
 
