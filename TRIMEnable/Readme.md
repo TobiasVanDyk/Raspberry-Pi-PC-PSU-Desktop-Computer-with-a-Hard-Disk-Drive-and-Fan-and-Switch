@@ -6,4 +6,4 @@ To enable SSD TRIM in linux for the ASMedia enclosure used in the two photos as 
 5. **sudo nano /etc/udev/rules.d/50-uasp-usb.rules** Add this content and substitute vvvv and dddd with the vendor and device id: ACTION=="add|change", ATTRS{idVendor}=="vvvv", ATTRS{idProduct}=="dddd", SUBSYSTEM=="scsi_disk", ATTR{provisioning_mode}="unmap"
 6. **sudo udevadm control --reload-rules && udevadm trigger** Better to reboot anyway
 7. **sudo fstrim / --verbose**
-Note that I had to update the firmware on the ASMedia SSD enclosures to version **141126_A1_EE_82.bin** using the MPTool.exe before the TRIM command would work. The udev files and history for both the ASMedia and VIA chipsets are uploaded here in the TRIMEnable folder.
+Note that I had to update the firmware on the ASMedia SSD enclosures to version **141126_A1_EE_82.bin** using the MPTool.exe before the TRIM command would work. The udev rule files and history for both the ASMedia and VIA chipsets are uploaded here in the TRIMEnable folder.
