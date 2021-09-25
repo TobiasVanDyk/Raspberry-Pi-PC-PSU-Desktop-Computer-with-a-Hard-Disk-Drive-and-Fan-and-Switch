@@ -1,4 +1,4 @@
-To enable SSD TRIM in linux for the ASMedia enclosure used in the two photos as above, follow the procedure here [**Enabling TRIM Support on a Via VL817 USB 3.1 SATA Adaptor**](https://spod.cx/blog/enabling_trim_support_via_VL817_usb_sata_adaptor.shtml):
+To enable SSD TRIM in linux for the ASMedia enclosure used in the two photos before, follow the procedure here [**Enabling TRIM Support on a Via VL817 USB 3.1 SATA Adaptor**](https://spod.cx/blog/enabling_trim_support_via_VL817_usb_sata_adaptor.shtml):
 1. **lsusb -t** Check that SSD supports **uas**
 2. **sudo apt install sg3-utils** To enable **sg_vpd**
 3. **sudo sg_vpd -a /dev/sda** Where sda is the SSD - check if **Unmap command supported (LBPU): 1** is present
