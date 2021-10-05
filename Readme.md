@@ -15,24 +15,6 @@ Smartmontools is useed to check the condition od the attached SSD/HDD and hdparm
 
 The small sdcard boot partition is used to select through the boot partition's cmdline.txt, which ssd (sda1 or sda2), or hdd (sdb1 or sdb2), root partition to boot. Each of the SSD/HDD drives has two 50GB root partitions and the rest of the space is a data partition (sda3 and sdb3), on each. The two root partitions on the hdd is a mirror (backup) of each of the two ssd root partitions. Fstab is modified for ssd use by adding noatime,nodiratime to the ssd partitions mounted.
 
-**Raspberry Pi 400:** To accommodate three other Raspberry Pi computers such as the RPi 400, whilst using only one 500GB SSD in an M.2 external enclosure, I partitioned the 500GB SSD into four partitions - three 50GB primary partitions for the Raspberry Pi root file system, and the rest as a 350GB FAT32 partition which holds video and audio files, binaries and various other mostly Raspberry Pi related documents. Doing it this way enables me to plug the SSD into another computer and then synchronize it with my music and video collection and Raspberry Pi documentation, from the other computer. For all three Raspberry Pi computers I [**still**](https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=301409) use an SDCard <img src="images/RealUnixersDoNotUseBootSDCards.png" width="16" height="16"/>  as the boot partition only, and they respectively boot /dev/sda1, /dev/sda2, and /dev/sda3. (Using device disk numbers rather than the partition’s UUID allows for the easy use of another SSD with the same partition scheme.) The three different Pi computers are an RPi 4B with an audio DAC (left picture below, and also see the last section), a [**Raspberry Pi 400**](https://github.com/TobiasVanDyk/TobiasVanDyk) (middle and right picture below), and another RPi used to test SPI LCD hats and programming the Pico. 
-
-I can then plug the drive into a windows PC and 
-1. Use Macrium Reflect Free to make backups of the ext4 partitions 1 to 3. It is one of the few Windows imaging programs that support ext4 partitions.
-2. Use the Windows Western Digital SSD Dashboard to run TRIM on the SSD
-3. Use a synch program to update the data partition from the Windows PC.
-
-<p align="left">
-<img src="images/SSDuse3Pi4Bs.png" width="600" />  
-</p>
-
-<p align="left">
-<img src="images/pi4pcm5122sda1.jpg" width="220" /> 
-<img src="images/RPi400-sda2.png" width="250" />  
-<img src="images/RPi400-sda2Screen.png" width="250" /> 
-</p>
-<br>
-
 `A common problem when using mutiple storage devices is that pcmanfm consumes 25% of the cpu (or 100% of one of four cores), even when the computer is idle.` Compare htop in the first and second picture below. This only happens when the root filesystem is on a hdd or an ssd - not when it is on a SDCard. When the boot partition is on an SDCard and the root partition on a hdd or ssd then the excessive cpu usage is observed. [**Many solutions have been suggested**](pcmanfm-high-cpu.txt), and some work for a limited time such as removing the @ in front of the pcmanfm in /etc/xdg/lxsession/LXDE-pi/autostart, using a local autostart, keeping an sdcard in the slot, etc. What worked for me on two different Raspberry Pi 4Bs with both SSD and HDD storage, is to edit the volume and removable disk mount preferences for the file manager, as shown below in the third picture. 
 
 <p align="left">
