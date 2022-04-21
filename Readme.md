@@ -92,6 +92,7 @@ To enable SSD TRIM in linux for the ASMedia enclosure used in the two photos as 
 7. **sudo fstrim / --verbose**<br>
  
 Note 1: I had to update the firmware on the ASMedia SSD enclosures to version **141126_A1_EE_82.bin** using the MPTool.exe before the TRIM command would work. The udev rule files and history for both the ASMedia and VIA chipsets are [**uploaded here**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/tree/master/TRIMEnable) in the TRIMEnable folder.
+
 Note 2: One of the Pi4B computers had a USB-to-SATA converter and a USN-to-M.2 converter that both used the same VIA VL817 controller chip. In that case the serial number of the controller chip must be added to the udev rule. To obtain the serial nyumber use the udevadm command such as:
 ```
 udevadm info -a /sys/block/sdx
