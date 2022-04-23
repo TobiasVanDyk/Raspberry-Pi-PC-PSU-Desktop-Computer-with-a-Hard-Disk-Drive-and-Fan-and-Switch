@@ -98,7 +98,7 @@ Note 2: One of the Pi4B computers had a USB-SATA converter and a USB-M.2-SSD con
 udevadm info -a /sys/block/sdx
 ```
 Where sdx is the device number for the M.2 controller. Then follow the block info given up the device tree until the serial number for the chip controller.
-Then add ATTRS{serial}=="info-obtained" to the udev rule. Refer to [**udevadm info**](TRIMEnable/Fix two Via817 controllers - add serial number.txt).
+Then add ATTRS{serial}=="info-obtained" to the udev rule. Refer to [**udevadm info**](TRIMEnable/Two-VIA817-controllers.txt).
  
 **2018:**
 I grew tired of connecting all the peripherals to my Raspberry Pi 3 or 4, every time I wanted to use it. I decided I wanted a Raspberry Pi computer permanently connected to a power supply, hard disk for the root file system and data, a large fan that can rotate slowly and quietly, and a monitor and speakers. Recently I also added a PiFi DAC (PCM5122) - there is space above the Pi and below the hdd or ssd for this type of hat. See the section at the end for configuration details for this DAC.
