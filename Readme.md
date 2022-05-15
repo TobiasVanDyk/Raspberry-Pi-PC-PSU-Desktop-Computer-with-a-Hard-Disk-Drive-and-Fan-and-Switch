@@ -131,7 +131,7 @@ Secondly I tested a 5cm long open USB3 to SATA converter (please see picture), w
 <img src="images/PCM5122.jpg" width="250" /> 
 </p>
 
-Using a USB 3 interface did result in faster boot and response times (such as when opening the Chromium browser or LibreOffice Writer, but it was not overwhelmingly faster. In addition the Raspberry Pi 3 and 4, supply a maximum of 1.2A spread over all 4 USB 2 and USB 3 ports, which is significantly less than the USB 3 standard. I will therefore remove the power connection on the front USB interface and connect it to a second identical variable 5v power supply module. This will enable me to run another HDD from the front USB interface.
+Using a USB 3 interface did result in faster boot and response times (such as when opening the Chromium browser or LibreOffice Writer, but it was not overwhelmingly faster. In addition the Raspberry Pi 3 and 4, supply a maximum of 1.2A spread over all 4 USB 2 and USB 3 ports, which is significantly less than the USB 3 standard - refer to [**USB-Power1**](https://forums.raspberrypi.com/viewtopic.php?t=334453) and [**USB-Power2**](http://www.cpmspectrepi.uk/raspberry_pi/MoinMoinExport/USBPowerSupplies.html#P4B.2C_USB_.27C.27_connected.2C_5.1V_3A_.28June_2019.29). I will therefore remove the power connection on the front USB interface and connect it to a second identical variable 5v power supply module. This will enable me to run another HDD from the front USB interface.
 
 ### Parts List
 
