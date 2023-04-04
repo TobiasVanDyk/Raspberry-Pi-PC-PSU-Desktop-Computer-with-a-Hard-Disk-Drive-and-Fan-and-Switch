@@ -327,7 +327,7 @@ If DAC Play with omxplayer: omxplayer -o alsa "File Name.mp4" On normal Pi with 
 <img src="images/photo-11.jpg" width="250" />  
 </p>
 
-**In another build, I used an inexpensive Wall Light Switch Box as a Raspberry Pi and DAC Hat case with space to include a Power Switch as well.**
+Also see two fan-cooled Raspberry Pi 4B [**3d-printed cases**](https://github.com/TobiasVanDyk/RaspberryPi-GPIO-Audio/blob/master/Raspberry-Pi-Audio-DAC-Cases/README.md) with two different audio DAC hats. *In another build, I used an inexpensive Wall Light Switch Box as a Raspberry Pi and DAC Hat case with space to include a Power Switch as well.* - for details see below.
 
 The Raspberry Pi 3 and Pi 4, has a board dimension of 56mm wide and 85mm long and I recently discovered that my PiFi Plus DAC hat and the Raspberry Pi will fit into an inexpensive (less than $ 0.50) PVC plastic electrical household wall box used to mount light switches - the one I bought had an outside dimension of 105mm x 60mm x 45mm, and on the inside it was 56mm wide and 101mm long - this means the Pi board will fit (tightly).
 
