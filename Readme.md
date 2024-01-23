@@ -1,9 +1,9 @@
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
 <p align="left">
-<img src="images/oled-volt.png" height="220" />   
-<img src="images/topfanfinal1.jpg" height="220" />  
-<img src="images/m2ssd1.jpg" height="220" />     
+<img src="images/oled-volt.png" height="180" />   
+<img src="images/topfanfinal1.jpg" height="180" />  
+<img src="images/m2ssd1.jpg" height="180" />     
 </p>
 
 **December 2023:** A Raspberry Pi 5 8GB was installed in the PC- PCU case with the top-mounted fan, but replacing the 5v 3A Buck Regulator with a [**5v 5A regulator**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/images/Buck5V5A.jpg), which is connected directly to the 40-pin GPIO connector through a socket which connects to both +5v GPIO pins and two of the GPIO earth pins on the Pi 5. For the maximum USB current output add the line usb_max_current_enable=1 to the config.txt file. 
