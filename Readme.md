@@ -1,11 +1,21 @@
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
 <p align="left">
-<img src="images/topfanfinal1.jpg" width="374" />  
-<img src="images/m2ssd1.jpg" width="350" />     
+<img src="images/oled-volt.png" height="220" />   
+<img src="images/topfanfinal1.jpg" height="220" />  
+<img src="images/m2ssd1.jpg" height="220" />     
 </p>
 
-A second Raspberry Pi housed inside a PC power supply case had been built during 2020. This uses a fan on top - and the arrangement of the components inside the PC-PSU case is therefore different. A modified (for 64x48 pixels), [**Adafruit SSD1306 driver**](https://github.com/adafruit/Adafruit_Python_SSD1306) or [**Luma Oled for Python**](https://github.com/rm-hull/luma.oled) is used to display the song or video information on a [**small OLED display**](https://www.robotics.org.za/D1-OLED?search=%20oled) mounted in the front of the case. For the Luma driver refer to [**songinfo2.py**](SSD1306Python64x48/songinfo2.py) inside the SSD1306Python64x48 folder here. The smaller, modified Adafruit SSD1306 library will be used for future development.
+**December 2023:** A Raspberry Pi 5 8GB was installed in the PC- PCU case with the top-mounted fan, but replacing the 5v 3A Buck Regulator with a [**5v 5A regulator**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/images/Buck5V5A.jpg), which is connected directly to the 40-pin GPIO connector through a socket which connects to both +5v GPIO pins and two of the GPIO earth pins on the Pi 5. For the maximum USB current output add the line usb_max_current_enable=1 to the config.txt file. 
+
+The fan speed was increased to from 700 rpm to about 1100 rpm (adjust the smaller second regulator). As a temporary cooling "test", the half-size WM8960 Sound hat (i.e. it directly exposes half the RPi5 cooling area to the top-mounted fan), was replaced with a full-sized IQAudio DacPlus Audio Hat. The Pi 5 temperature then during normal use is about 40 to 45 degrees Celsius, or about 20 degrees above room temperature. 
+
+The 5v supply voltage can be displayed on the OLED display by using the new Pi 5 specific vcgencmd pmic_read_adc EXT5V_V command in the scroller python script - (refer to the section below. This python script is included as [**oled-volt.py**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/SSD1306Python64x48/oled-volt.py), and with both the Voltage and temperature displayed as [**oled-volt-temperature.py**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/SSD1306Python64x48/oled-volt-temperature.py). 
+
+Note that to **enable the WM8960 Waveshare hat with the Raspberry Pi 5** the following is required:<br>
+Refer to the [**solved issue here**](https://github.com/waveshare/WM8960-Audio-HAT/issues/51), and then use the [**script here to install**](https://github.com/ubopod/ubo-sdk/blob/main/system/setup/install_wm8960.sh).
+
+**September 2020:** A second Raspberry Pi housed inside a PC power supply case had been built during 2020. This uses a fan on top - and the arrangement of the components inside the PC-PSU case is therefore different. A modified (for 64x48 pixels), [**Adafruit SSD1306 driver**](https://github.com/adafruit/Adafruit_Python_SSD1306) or [**Luma Oled for Python**](https://github.com/rm-hull/luma.oled) is used to display the song or video information on a [**small OLED display**](https://www.robotics.org.za/D1-OLED?search=%20oled) mounted in the front of the case. For the Luma driver refer to [**songinfo2.py**](SSD1306Python64x48/songinfo2.py) inside the SSD1306Python64x48 folder here. The smaller, modified Adafruit SSD1306 library will be used for future development.
 
 A Raspberry Pi 4B is connected to three storage devices: (1) the original 32GB sdcard that now only serves as a boot partition, (2) a 240GB M.2 Western Digital SSD connected through an M.2 to USB3 adapter card - [**NexStar SX M.2 SSD to USB 3.0 Enclosure**](https://www.vantecusa.com/products_detail.php?p_id=214), and (3) a 1TB 2.5" Toshiba hdd connected through a SATA to USBC converter - [**ORICO 2.5 inch Transparent Type-C Hard Drive Enclosure**](http://my.orico.cc/goods.php?id=6352). The M.2 to USB3 converter use an ASMedia chipset (lsusb ID 174c:55aa ASMedia), which should mean it will do UAS without errors. SATA to USB3 chipsets that have broken UAS support (which is essential for SSD TRIM operations), can often be partially (Note 1) corrected by keeping them in the Raspberry Pi 4B USB3 hub but then only using the two USB2 data lines, as compared to when using them in the Raspberry Pi 4B USB2 hub. (Note 1: This is then at a big loss in throughput.)
 
