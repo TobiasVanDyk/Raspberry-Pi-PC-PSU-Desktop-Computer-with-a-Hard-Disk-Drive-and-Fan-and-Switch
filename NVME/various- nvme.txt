@@ -1,0 +1,52 @@
+pi@raspberrypi:~ $ dmesg | grep nvme
+[    1.889109] nvme nvme0: pci function 0000:01:00.0
+[    1.894318] nvme 0000:01:00.0: enabling device (0000 -> 0002)
+[    1.899399] nvme nvme0: Shutdown timeout set to 8 seconds
+[    1.957543] nvme nvme0: allocated 64 MiB host memory buffer.
+[    2.484386] nvme nvme0: 4/0/0 default/read/poll queues
+[    2.925183]  nvme0n1: p1 p2 p3 p4
+[    6.182830] EXT4-fs (nvme0n1p2): mounted filesystem with ordered data mode. Quota mode: none.
+[    7.160935] EXT4-fs (nvme0n1p2): re-mounted. Quota mode: none.
+
+
+pi@raspberrypi:~ $ rpi-eeprom-update
+BOOTLOADER: up to date
+   CURRENT: Fri 05 Jan 2024 15:57:40 UTC (1704470260)
+    LATEST: Fri 05 Jan 2024 15:57:40 UTC (1704470260)
+   RELEASE: default (/lib/firmware/raspberrypi/bootloader-2712/default)
+            Use raspi-config to change the release.
+
+pi@raspberrypi:~ $ pi@raspberrypi:~ $ sudo hdparm -t /dev/nvme0n1p2
+
+/dev/nvme0n1p2:
+ Timing buffered disk reads: 1234 MB in  3.00 seconds = 410.73 MB/sec
+pi@raspberrypi:~ $ 
+---------------------------------------------------------------------
+Update to latest:
+pi@raspberrypi:~ $ rpi-eeprom-update
+BOOTLOADER: up to date
+   CURRENT: Mon 22 Jan 2024 14:44:36 UTC (1705934676)
+    LATEST: Mon 22 Jan 2024 14:44:36 UTC (1705934676)
+   RELEASE: latest (/lib/firmware/raspberrypi/bootloader-2712/latest)
+            Use raspi-config to change the release.
+
+pi@raspberrypi:~ $ dmesg | grep nvme
+[    1.889086] nvme nvme0: pci function 0000:01:00.0
+[    1.894297] nvme 0000:01:00.0: enabling device (0000 -> 0002)
+[    1.899380] nvme nvme0: Shutdown timeout set to 8 seconds
+[    1.957547] nvme nvme0: allocated 64 MiB host memory buffer.
+[    2.484415] nvme nvme0: 4/0/0 default/read/poll queues
+[    2.925125]  nvme0n1: p1 p2 p3 p4
+[    6.149731] EXT4-fs (nvme0n1p2): mounted filesystem with ordered data mode. Quota mode: none.
+[    7.109496] EXT4-fs (nvme0n1p2): re-mounted. Quota mode: none.
+
+pi@raspberrypi:~ $ sudo hdparm -t /dev/nvme0n1p2
+
+/dev/nvme0n1p2:
+ Timing buffered disk reads: 1244 MB in  3.00 seconds = 414.15 MB/sec
+pi@raspberrypi:~ $ 
+
+
+
+
+
