@@ -1,6 +1,14 @@
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
 <p align="left">
+<img src="NVME/pimoroni1.png" height="180" />   
+<img src="NVME/pimoroni2.png" height="180" />   
+<img src="NVME/pimoroni3.png" height="180" />      
+</p>
+
+**January 2024:** A [**Pimoroni NVME-base**](https://shop.pimoroni.com/products/nvme-base?variant=41219587178579) was added to te Pi5 with the OLED display. It was an easy install and the only change was to use 4 plastice standoffs with a 2mm shorter length - i.e. the thichness of the Pimorononi base. A Samsung 980 500GB was installed on the nvme-base. Diagnostics are provided [**here**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/NVME/various-%20nvme.txt) and [**here**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/NVME/smartctl-sda-nvme0n1.txt). Note that there is now a fix for WD Blue SN550 nvme boot issue - refer to this [**discussion**](https://forums.raspberrypi.com/viewtopic.php?t=364327).
+
+<p align="left">
 <img src="images/oled-volt.png" height="180" />   
 <img src="images/topfanfinal1.jpg" height="180" />  
 <img src="images/m2ssd1.jpg" height="180" />     
