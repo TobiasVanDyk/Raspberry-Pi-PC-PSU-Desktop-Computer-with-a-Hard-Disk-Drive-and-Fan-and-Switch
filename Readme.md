@@ -6,7 +6,14 @@
 <img src="NVME/pimoroni3.jpg" height="180" />      
 </p>
 
-**January 2024:** A [**Pimoroni NVME-base**](https://shop.pimoroni.com/products/nvme-base?variant=41219587178579) was added to the Pi5 with the OLED display. It was an easy install and the only change was to use 4 plastic standoffs with a 2mm shorter length - i.e. the same as the thickness of the Pimorononi base. A Samsung 980 500GB was installed on the nvme-base. Diagnostics are provided [**here**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/NVME/various-%20nvme.txt) and [**here**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/NVME/smartctl-sda-nvme0n1.txt) - the Samsung 980 on the NVME-base runs at a very cool 10 degrees above room temperature, and about 10 degrees below the Pi5. Note that there is now a fix for WD Blue SN550 nvme boot issue - refer to this [**discussion**](https://forums.raspberrypi.com/viewtopic.php?t=364327).
+**January 2024:** A [**Pimoroni NVME-base**](https://shop.pimoroni.com/products/nvme-base?variant=41219587178579) was added to the Pi5 with the OLED display. It was an easy install and the only change was to use 4 plastic standoffs with a 2mm shorter length - i.e. the same as the thickness of the Pimorononi base. A Samsung 980 500GB was installed on the nvme-base. Diagnostics are provided [**here**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/NVME/various-%20nvme.txt) and [**here**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/NVME/smartctl-sda-nvme0n1.txt) - the Samsung 980 on the NVME-base runs at a very cool 10 degrees above room temperature, and about 10 degrees below the Pi5. 
+
+<p align="left">
+<img src="NVME/pimoroni10.png" height="180" />   
+<img src="NVME/pimoroni11.png" height="180" />       
+</p>
+
+A second Pi5 was installed in [**this case**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/tree/master/STL), and was taken out and a [**WD SN550 500GB NVME drive**](https://www.westerndigital.com/en-il/products/internal-drives/wd-blue-sn550-nvme-ssd?sku=WDS500G2B0C) attached to it. After reading about the fix for the WD Blue SN550 nvme boot issue - refer to this [**discussion**](https://forums.raspberrypi.com/viewtopic.php?t=364327), and aplyying all the fixes, the Pi5 seems to be working ok - for install details and diagnostics see [**rpi5-wd-sn550-nvme**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/NVME/rpi5-wd-sn550-nvme.txt). Note that lspci misidentifies the WD drive but smartctl correctly identifies it.
 
 <p align="left">
 <img src="images/oled-volt.png" height="180" />   
