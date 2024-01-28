@@ -1,0 +1,464 @@
+pi@raspberrypi:~ $ lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+mmcblk0     179:0    0  29.7G  0 disk 
+├─mmcblk0p1 179:1    0   512M  0 part /boot/firmware
+└─mmcblk0p2 179:2    0  29.2G  0 part /
+nvme0n1     259:0    0 465.8G  0 disk 
+pi@raspberrypi:~ $ lspci -vvv
+0000:00:00.0 PCI bridge: Broadcom Inc. and subsidiaries Device 2712 (rev 21) (prog-if 00 [Normal decode])
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 39
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+	Memory behind bridge: 00000000-000fffff [size=1M] [32-bit]
+	Prefetchable memory behind bridge: 00000000fff00000-00000000000fffff [disabled] [64-bit]
+	Secondary status: 66MHz- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- <SERR- <PERR-
+	BridgeCtl: Parity- SERR- NoISA- VGA- VGA16- MAbort- >Reset- FastB2B-
+		PriDiscTmr- SecDiscTmr- DiscTmrStat- DiscTmrSERREn-
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+
+0000:01:00.0 Non-Volatile memory controller: Sandisk Corp WD Green SN350 NVMe SSD 240GB (DRAM-less) (rev 01) (prog-if 02 [NVM Express])
+	Subsystem: Sandisk Corp WD Green SN350 NVMe SSD 240GB (DRAM-less)
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 39
+	Region 0: Memory at 1b00000000 (64-bit, non-prefetchable) [size=16K]
+	Region 4: Memory at 1b00004000 (64-bit, non-prefetchable) [size=256]
+	Capabilities: <access denied>
+	Kernel driver in use: nvme
+
+0001:00:00.0 PCI bridge: Broadcom Inc. and subsidiaries Device 2712 (rev 21) (prog-if 00 [Normal decode])
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 45
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+	Memory behind bridge: 00000000-005fffff [size=6M] [32-bit]
+	Prefetchable memory behind bridge: 00000000fff00000-00000000000fffff [disabled] [64-bit]
+	Secondary status: 66MHz- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- <SERR- <PERR-
+	BridgeCtl: Parity- SERR- NoISA- VGA- VGA16- MAbort- >Reset- FastB2B-
+		PriDiscTmr- SecDiscTmr- DiscTmrStat- DiscTmrSERREn-
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+
+0001:01:00.0 Ethernet controller: Device 1de4:0001
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 45
+	Region 0: Memory at 1f00410000 (32-bit, non-prefetchable) [size=16K]
+	Region 1: Memory at 1f00000000 (32-bit, non-prefetchable) [virtual] [size=4M]
+	Region 2: Memory at 1f00400000 (32-bit, non-prefetchable) [size=64K]
+	Capabilities: <access denied>
+	Kernel driver in use: rp1
+
+pi@raspberrypi:~ $ 
+pi@raspberrypi:~ $ sudo dmesg | grep nvme
+[    0.533810] nvme nvme0: pci function 0000:01:00.0
+[    0.533849] nvme 0000:01:00.0: enabling device (0000 -> 0002)
+[    0.543712] nvme nvme0: allocated 128 MiB host memory buffer.
+[    0.544635] nvme nvme0: 4/0/0 default/read/poll queues
+[    0.547305]  nvme0n1:
+pi@raspberrypi:~ $ 
+
+
+pi@raspberrypi:~ $ rpi-eeprom-update
+BOOTLOADER: up to date
+   CURRENT: Fri 05 Jan 2024 15:57:40 UTC (1704470260)
+    LATEST: Fri 05 Jan 2024 15:57:40 UTC (1704470260)
+   RELEASE: default (/lib/firmware/raspberrypi/bootloader-2712/default)
+            Use raspi-config to change the release.
+pi@raspberrypi:~ $ 
+
+
+pi@raspberrypi:~ $ sudo rpi-update
+ *** Raspberry Pi firmware updater by Hexxeh, enhanced by AndrewS and Dom
+ *** Performing self-update
+ *** Relaunching after update
+ *** Raspberry Pi firmware updater by Hexxeh, enhanced by AndrewS and Dom
+FW_REV:d86b5843d68b9972a5430a6d3da1b271cfc83521
+BOOTLOADER_REV:88b33ab0307c6281aaca913968de73aabca67a0d
+ *** We're running for the first time
+ *** Backing up files (this will take a few minutes)
+ *** Backing up firmware
+ *** Backing up modules 6.1.0-rpi7-rpi-2712
+WANT_32BIT:0 WANT_64BIT:1 WANT_PI4:1 WANT_PI5:1
+#############################################################
+WARNING: This update bumps to rpi-6.1.y linux tree
+See: https://forums.raspberrypi.com/viewtopic.php?t=344246
+
+'rpi-update' should only be used if there is a specific
+reason to do so - for example, a request by a Raspberry Pi
+engineer or if you want to help the testing effort
+and are comfortable with restoring if there are regressions.
+
+DO NOT use 'rpi-update' as part of a regular update process.
+##############################################################
+Would you like to proceed? (y/N)
+Downloading bootloader tools
+
+Downloading bootloader images
+ *** Downloading specific firmware revision (this will take a few minutes)
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  144M  100  144M    0     0  3540k      0  0:00:41  0:00:41 --:--:-- 2472k
+*** PREPARING EEPROM UPDATES ***
+
+BOOTLOADER: update available
+   CURRENT: Fri 05 Jan 2024 15:57:40 UTC (1704470260)
+    LATEST: Wed 24 Jan 2024 12:16:01 UTC (1706098561)
+   RELEASE: latest (/lib/firmware/raspberrypi/bootloader-2712/latest)
+            Use raspi-config to change the release.
+   CURRENT: Fri 05 Jan 2024 15:57:40 UTC (1704470260)
+    UPDATE: Wed 24 Jan 2024 12:16:01 UTC (1706098561)
+    BOOTFS: /boot/firmware
+'/tmp/tmp.kaWbPi7TBj' -> '/boot/firmware/pieeprom.upd'
+Copying recovery.bin to /boot/firmware for EEPROM update
+
+EEPROM updates pending. Please reboot to apply the update.
+To cancel a pending update run "sudo rpi-eeprom-update -r".
+ *** Updating firmware
+ *** Updating kernel modules
+ *** depmod 6.1.74-v8-16k+
+ *** depmod 6.1.74-v8+
+ *** Updating VideoCore libraries
+ *** Using SoftFP libraries
+ *** Updating SDK
+ *** Running ldconfig
+ *** Storing current firmware revision
+ *** Deleting downloaded files
+ *** Syncing changes to disk
+ *** If no errors appeared, your firmware was successfully updated to d86b5843d68b9972a5430a6d3da1b271cfc83521
+ *** A reboot is needed to activate the new firmware
+pi@raspberrypi:~ $ 
+
+pi@raspberrypi:~ $ lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+mmcblk0     179:0    0  29.7G  0 disk 
+├─mmcblk0p1 179:1    0   512M  0 part /boot/firmware
+└─mmcblk0p2 179:2    0  29.2G  0 part /
+nvme0n1     259:0    0 465.8G  0 disk 
+pi@raspberrypi:~ $ lspci -vvv
+0000:00:00.0 PCI bridge: Broadcom Inc. and subsidiaries Device 2712 (rev 21) (prog-if 00 [Normal decode])
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 38
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+	Memory behind bridge: 00000000-000fffff [size=1M] [32-bit]
+	Prefetchable memory behind bridge: 00000000fff00000-00000000000fffff [disabled] [64-bit]
+	Secondary status: 66MHz- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- <SERR- <PERR-
+	BridgeCtl: Parity- SERR- NoISA- VGA- VGA16- MAbort- >Reset- FastB2B-
+		PriDiscTmr- SecDiscTmr- DiscTmrStat- DiscTmrSERREn-
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+
+0000:01:00.0 Non-Volatile memory controller: Sandisk Corp WD Green SN350 NVMe SSD 240GB (DRAM-less) (rev 01) (prog-if 02 [NVM Express])
+	Subsystem: Sandisk Corp WD Green SN350 NVMe SSD 240GB (DRAM-less)
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 38
+	Region 0: Memory at 1b00000000 (64-bit, non-prefetchable) [size=16K]
+	Region 4: Memory at 1b00004000 (64-bit, non-prefetchable) [size=256]
+	Capabilities: <access denied>
+	Kernel driver in use: nvme
+
+0001:00:00.0 PCI bridge: Broadcom Inc. and subsidiaries Device 2712 (rev 21) (prog-if 00 [Normal decode])
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 44
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+	Memory behind bridge: 00000000-005fffff [size=6M] [32-bit]
+	Prefetchable memory behind bridge: 00000000fff00000-00000000000fffff [disabled] [64-bit]
+	Secondary status: 66MHz- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- <SERR- <PERR-
+	BridgeCtl: Parity- SERR- NoISA- VGA- VGA16- MAbort- >Reset- FastB2B-
+		PriDiscTmr- SecDiscTmr- DiscTmrStat- DiscTmrSERREn-
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+
+0001:01:00.0 Ethernet controller: Device 1de4:0001
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 44
+	Region 0: Memory at 1f00410000 (32-bit, non-prefetchable) [size=16K]
+	Region 1: Memory at 1f00000000 (32-bit, non-prefetchable) [virtual] [size=4M]
+	Region 2: Memory at 1f00400000 (32-bit, non-prefetchable) [size=64K]
+	Capabilities: <access denied>
+	Kernel driver in use: rp1
+
+pi@raspberrypi:~ $ sudo rpi-eeprom-update 
+BOOTLOADER: up to date
+   CURRENT: Wed 24 Jan 2024 12:16:01 UTC (1706098561)
+    LATEST: Wed 24 Jan 2024 12:16:01 UTC (1706098561)
+   RELEASE: latest (/lib/firmware/raspberrypi/bootloader-2712/latest)
+            Use raspi-config to change the release.
+pi@raspberrypi:~ $ 
+
+
+pi@raspberrypi:~ $ lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+mmcblk0     179:0    0  29.7G  0 disk 
+├─mmcblk0p1 179:1    0   512M  0 part /boot/firmware
+└─mmcblk0p2 179:2    0  29.2G  0 part /
+nvme0n1     259:0    0 465.8G  0 disk 
+pi@raspberrypi:~ $ sudo apt-get update && sudo apt-get install rsync gdisk
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Hit:2 http://deb.debian.org/debian-security bookworm-security InRelease
+Hit:3 http://archive.raspberrypi.com/debian bookworm InRelease                 
+Hit:4 http://deb.debian.org/debian bookworm-updates InRelease                  
+Reading package lists... Done                               
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+rsync is already the newest version (3.2.7-1).
+gdisk is already the newest version (1.0.9-2.1).
+gdisk set to manually installed.
+The following package was automatically installed and is no longer required:
+  rtimucli
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+pi@raspberrypi:~ $ sudo gdisk /dev/nvme0n1
+GPT fdisk (gdisk) version 1.0.9
+
+Partition table scan:
+  MBR: MBR only
+  BSD: not present
+  APM: not present
+  GPT: present
+
+Found valid MBR and GPT. Which do you want to use?
+ 1 - MBR
+ 2 - GPT
+ 3 - Create blank GPT
+
+Your answer: 1
+
+Command (? for help): n
+Partition number (1-128, default 1): 1
+First sector (34-976773134, default = 2048) or {+-}size{KMGTP}: 
+Last sector (2048-976773134, default = 976773119) or {+-}size{KMGTP}: +512M
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): L
+Type search string, or <Enter> to show all codes: 
+0700 Microsoft basic data                0701 Microsoft Storage Replica         
+0702 ArcaOS Type 1                       0c01 Microsoft reserved                
+2700 Windows RE                          3000 ONIE boot                         
+3001 ONIE config                         3900 Plan 9                            
+4100 PowerPC PReP boot                   4200 Windows LDM data                  
+4201 Windows LDM metadata                4202 Windows Storage Spaces            
+7501 IBM GPFS                            7f00 ChromeOS kernel                   
+7f01 ChromeOS root                       7f02 ChromeOS reserved                 
+7f03 ChromeOS firmware                   7f04 ChromeOS mini-OS                  
+7f05 ChromeOS hibernate                  8200 Linux swap                        
+8300 Linux filesystem                    8301 Linux reserved                    
+8302 Linux /home                         8303 Linux x86 root (/)                
+8304 Linux x86-64 root (/)               8305 Linux ARM64 root (/)              
+8306 Linux /srv                          8307 Linux ARM32 root (/)              
+8308 Linux dm-crypt                      8309 Linux LUKS                        
+830a Linux IA-64 root (/)                830b Linux x86 root verity             
+830c Linux x86-64 root verity            830d Linux ARM32 root verity           
+830e Linux ARM64 root verity             830f Linux IA-64 root verity           
+8310 Linux /var                          8311 Linux /var/tmp                    
+8312 Linux user's home                   8313 Linux x86 /usr                    
+8314 Linux x86-64 /usr                   8315 Linux ARM32 /usr                  
+Press the <Enter> key to see more codes, q to quit: q
+
+Hex code or GUID (L to show codes, Enter = 8300): 0700
+Changed type of partition to 'Microsoft basic data'
+
+Command (? for help): n
+Partition number (2-128, default 2): 2
+First sector (34-976773134, default = 1050624) or {+-}size{KMGTP}: 
+Last sector (1050624-976773134, default = 976773119) or {+-}size{KMGTP}: +100G
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): 
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): n
+Partition number (3-128, default 3): 3
+First sector (34-976773134, default = 210765824) or {+-}size{KMGTP}: 
+Last sector (210765824-976773134, default = 976773119) or {+-}size{KMGTP}: +100G
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): 
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): n
+Partition number (4-128, default 4): 4
+First sector (34-976773134, default = 420481024) or {+-}size{KMGTP}: 
+Last sector (420481024-976773134, default = 976773119) or {+-}size{KMGTP}: 
+Current type is 8300 (Linux filesystem)
+Hex code or GUID (L to show codes, Enter = 8300): 
+Changed type of partition to 'Linux filesystem'
+
+Command (? for help): v
+
+No problems found. 2029 free sectors (1014.5 KiB) available in 2
+segments, the largest of which is 2014 (1007.0 KiB) in size.
+
+Command (? for help): w
+
+Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
+PARTITIONS!!
+
+Do you want to proceed? (Y/N): y
+OK; writing new GUID partition table (GPT) to /dev/nvme0n1.
+The operation has completed successfully.
+pi@raspberrypi:~ $ lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+mmcblk0     179:0    0  29.7G  0 disk 
+├─mmcblk0p1 179:1    0   512M  0 part /boot/firmware
+└─mmcblk0p2 179:2    0  29.2G  0 part /
+nvme0n1     259:0    0 465.8G  0 disk 
+├─nvme0n1p1 259:5    0   512M  0 part 
+├─nvme0n1p2 259:6    0   100G  0 part 
+├─nvme0n1p3 259:7    0   100G  0 part 
+└─nvme0n1p4 259:8    0 265.3G  0 part 
+pi@raspberrypi:~ $ 
+
+pi@raspberrypi:~ $ sudo mke2fs -t ext4 -L rootfs /dev/nvme0n1p2
+mke2fs 1.47.0 (5-Feb-2023)
+Discarding device blocks: done                            
+Creating filesystem with 26214400 4k blocks and 6553600 inodes
+Filesystem UUID: fafa63cd-6cdc-417f-b7fb-841f339fd801
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+	4096000, 7962624, 11239424, 20480000, 23887872
+
+Allocating group tables: done                            
+Writing inode tables: done                            
+Creating journal (131072 blocks): done
+Writing superblocks and filesystem accounting information: done   
+
+pi@raspberrypi:~ $ sudo mke2fs -t ext4 -L rootfs /dev/nvme0n1p3
+mke2fs 1.47.0 (5-Feb-2023)
+Discarding device blocks: done                            
+Creating filesystem with 26214400 4k blocks and 6553600 inodes
+Filesystem UUID: 5b028799-ff84-42e5-ba08-7bdf4f501aa5
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+	4096000, 7962624, 11239424, 20480000, 23887872
+
+Allocating group tables: done                            
+Writing inode tables: done                            
+Creating journal (131072 blocks): done
+Writing superblocks and filesystem accounting information: done   
+
+pi@raspberrypi:~ $ sudo mke2fs -t ext4 -L datafs /dev/nvme0n1p4
+mke2fs 1.47.0 (5-Feb-2023)
+Discarding device blocks: done                            
+Creating filesystem with 69536512 4k blocks and 17391616 inodes
+Filesystem UUID: f683a132-a79b-4582-827b-d56abf7ef0ce
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+	4096000, 7962624, 11239424, 20480000, 23887872
+
+Allocating group tables: done                            
+Writing inode tables: done                            
+Creating journal (262144 blocks): done
+Writing superblocks and filesystem accounting information: done     
+
+pi@raspberrypi:~ $ 
+
+pi@raspberrypi:~ $ sudo smartctl -a /dev/nvme0n1
+smartctl 7.3 2022-02-28 r5338 [aarch64-linux-6.1.74-v8-16k+] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Number:                       WDC WDS500G2B0C-00PXH0
+Serial Number:                      21271P805689
+Firmware Version:                   233010WD
+PCI Vendor/Subsystem ID:            0x15b7
+IEEE OUI Identifier:                0x001b44
+Total NVM Capacity:                 500,107,862,016 [500 GB]
+Unallocated NVM Capacity:           0
+Controller ID:                      1
+NVMe Version:                       1.4
+Number of Namespaces:               1
+Namespace 1 Size/Capacity:          500,107,862,016 [500 GB]
+Namespace 1 Formatted LBA Size:     512
+Namespace 1 IEEE EUI-64:            001b44 8b41802ccd
+Local Time is:                      Sun Jan 28 13:31:38 2024 SAST
+Firmware Updates (0x14):            2 Slots, no Reset required
+Optional Admin Commands (0x0017):   Security Format Frmw_DL Self_Test
+Optional NVM Commands (0x005f):     Comp Wr_Unc DS_Mngmt Wr_Zero Sav/Sel_Feat Timestmp
+Log Page Attributes (0x1e):         Cmd_Eff_Lg Ext_Get_Lg Telmtry_Lg Pers_Ev_Lg
+Maximum Data Transfer Size:         128 Pages
+Warning  Comp. Temp. Threshold:     80 Celsius
+Critical Comp. Temp. Threshold:     85 Celsius
+Namespace 1 Features (0x02):        NA_Fields
+
+Supported Power States
+St Op     Max   Active     Idle   RL RT WL WT  Ent_Lat  Ex_Lat
+ 0 +     3.50W    2.40W       -    0  0  0  0        0       0
+ 1 +     2.70W    2.10W       -    0  0  0  0        0       0
+ 2 +     1.90W    1.80W       -    0  0  0  0        0       0
+ 3 -   0.0250W       -        -    3  3  3  3     3900   11000
+ 4 -   0.0050W       -        -    4  4  4  4     5000   44000
+
+Supported LBA Sizes (NSID 0x1)
+Id Fmt  Data  Metadt  Rel_Perf
+ 0 +     512       0         2
+ 1 -    4096       0         1
+
+=== START OF SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+SMART/Health Information (NVMe Log 0x02)
+Critical Warning:                   0x00
+Temperature:                        36 Celsius
+Available Spare:                    100%
+Available Spare Threshold:          10%
+Percentage Used:                    0%
+Data Units Read:                    17,305,976 [8.86 TB]
+Data Units Written:                 9,095,469 [4.65 TB]
+Host Read Commands:                 233,359,026
+Host Write Commands:                130,217,730
+Controller Busy Time:               516
+Power Cycles:                       1,463
+Power On Hours:                     2,691
+Unsafe Shutdowns:                   32
+Media and Data Integrity Errors:    0
+Error Information Log Entries:      102
+Warning  Comp. Temperature Time:    0
+Critical Comp. Temperature Time:    0
+
+Error Information (NVMe Log 0x01, 16 of 256 entries)
+No Errors Logged
+
+pi@raspberrypi:~ $ 
+
+
+pi@raspberrypi:~ $ sudo hdparm -t /dev/nvme0n1p2
+
+/dev/nvme0n1p2:
+ Timing buffered disk reads: 1322 MB in  3.00 seconds = 440.66 MB/sec
+pi@raspberrypi:~ $ sudo hdparm -t /dev/nvme0n1p2
+
+/dev/nvme0n1p2:
+ Timing buffered disk reads: 1340 MB in  3.00 seconds = 446.05 MB/sec
+pi@raspberrypi:~ $ 
+
+pi@raspberrypi:~ $ sudo fstrim / --verbose
+/: 84.8 GiB (91053821952 bytes) trimmed
+pi@raspberrypi:~ $ 
+
+
+pi@raspberrypi:~ $ lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+mmcblk0     179:0    0  29.7G  0 disk 
+├─mmcblk0p1 179:1    0   512M  0 part /boot/firmware
+└─mmcblk0p2 179:2    0  29.2G  0 part /media/pi/rootfs
+nvme0n1     259:0    0 465.8G  0 disk 
+├─nvme0n1p1 259:1    0   512M  0 part 
+├─nvme0n1p2 259:2    0   100G  0 part /
+├─nvme0n1p3 259:3    0   100G  0 part 
+└─nvme0n1p4 259:4    0 265.3G  0 part /mnt/data
+pi@raspberrypi:~ $ 
+
