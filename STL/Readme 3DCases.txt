@@ -4,5 +4,6 @@
 
 (3) If a Audio/DAC hat is mounted put the fan on top of the upper lid, else put it below the lid i.e. inside the case
 
-(4) The Pimoroni NVME base needs 10mm nylon standoffs to give the Pi5 the correct height.
+(4) The Pimoroni NVME base needs 4 x 10mm nylon standoffs to give the Pi5 the correct height. 
+Mount it on four washers between the NVME-base and the bottom of the case at the same height as the M2 screw holding the NVME drive down.
 
