@@ -6,4 +6,6 @@
 
 (4) The Pimoroni NVME base needs 4 x 10mm nylon standoffs to give the Pi5 the correct height. 
 Mount it on four washers between the NVME-base and the bottom of the case at the same height as the M2 screw holding the NVME drive down.
+The case is wide enough that the entire vertical assembly - from the NVME-base + RPi5 + Hat/Fan - can be done outside the case and then
+dropped into the bottom case.
 
