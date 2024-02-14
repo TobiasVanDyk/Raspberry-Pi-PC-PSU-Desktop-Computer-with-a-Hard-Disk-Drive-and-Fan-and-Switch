@@ -1,9 +1,10 @@
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
-<p align="left">
-<img src="NVME/pimoroni1.png" height="180" />   
-<img src="NVME/pimoroni2.png" height="180" />   
-<img src="NVME/pimoroni3.jpg" height="180" />      
+<p align="left">  
+<img src="NVME/pimoroni0.png" height="140" /> 
+<img src="NVME/pimoroni1.png" height="140" />   
+<img src="NVME/pimoroni2.png" height="140" />   
+<img src="NVME/pimoroni3.jpg" height="140" />      
 </p>
 
 **January 2024:** A [**Pimoroni NVME-base**](https://shop.pimoroni.com/products/nvme-base?variant=41219587178579) was added to the Pi5 with the OLED display. It was an easy install and the only change was to use 4 plastic standoffs with a 2mm shorter length - i.e. the same as the thickness of the Pimorononi base. A Samsung 980 500GB was installed on the nvme-base. Diagnostics are provided [**here**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/NVME/various-%20nvme.txt) and [**here**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/NVME/smartctl-sda-nvme0n1.txt) - the Samsung 980 on the NVME-base runs at a very cool 10 degrees above room temperature, and about 10 degrees below the Pi5. 
@@ -24,7 +25,7 @@ A second Pi5 was installed in [**this case adapted to house the nvme drive at th
 
 **December 2023:** A Raspberry Pi 5 8GB was installed in the PC- PCU case with the top-mounted fan, but replacing the 5v 3A Buck Regulator with a [**5v 5A regulator**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/images/Buck5V5A.jpg), which is connected directly to the 40-pin GPIO connector through a socket which connects to both +5v GPIO pins and two of the GPIO earth pins on the Pi 5. For the maximum USB current output add the line usb_max_current_enable=1 to the config.txt file. 
 
-The fan speed was increased to from 700 rpm to about 1100 rpm (adjust the smaller second regulator). As a temporary cooling "test", the half-size WM8960 Sound hat (i.e. it directly exposes half the RPi5 cooling area to the top-mounted fan), was replaced with a full-sized IQAudio DacPlus Audio Hat. The Pi 5 temperature then during normal use is about 40 to 45 degrees Celsius, or about 20 degrees above room temperature. 
+The fan speed was increased to from 700 rpm to about 1100 rpm (adjust the smaller second regulator). As a temporary cooling "test", the half-size WM8960 Sound hat (i.e. it directly exposes half the RPi5 cooling area to the top-mounted fan), was replaced with a full-sized IQAudio DacPlus Audio Hat - refer to the first picture on this page. The Pi 5 temperature then during normal use is about 40 to 45 degrees Celsius, or about 20 degrees above room temperature. 
 
 The 5v supply voltage can be displayed on the OLED display by using the new Pi 5 specific vcgencmd pmic_read_adc EXT5V_V command in the scroller python script - (refer to the section below. This python script is included as [**oled-volt.py**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/SSD1306Python64x48/oled-volt.py), and with both the Voltage and temperature displayed as [**oled-volt-temperature.py**](https://github.com/TobiasVanDyk/Raspberry-Pi-PC-PSU-Desktop-Computer-with-a-Hard-Disk-Drive-and-Fan-and-Switch/blob/master/SSD1306Python64x48/oled-volt-temperature.py). 
 
