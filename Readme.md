@@ -1,3 +1,6 @@
+# The Raspberry Pi 400
+Probably the most usable and affordable GPIO-enabled personal computer ever made - [**read more**](RPi400/README.md)
+
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
 <p align="left">  
