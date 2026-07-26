@@ -4,6 +4,15 @@ Probably the most usable and affordable GPIO-enabled personal computer ever made
 # Raspberry Pi PC PSU Desktop Computer with a Hard Disk Drive and Fan and Switch
 
 <p align="left">  
+<img src="images/RPi5Front.jpg" height="140" /> 
+<img src="images/RPi5Back.jpg" height="140" />   
+<img src="images/RPi5Extender.jpg" height="140" />   
+<img src="images/RPi5MiniPCI.jpg" height="140" />      
+</p>
+
+**July 2026:** A [**Waveshare Pi5 Connector Adapter**](https://www.waveshare.com/wiki/Pi5-Connector-Adapter) was added to an 8GB Pi 5. It is used to bring all the Pi 5 connections to one side and convert the two mini HDMI connectors to full-sized HDMI connectors. It was an easy install using the 3D-printed case in the STL folder - RPi5Case.stl. A small 30mm 12v fan was positioned on top of the Pi5 CPU (no heatsink necessary) and kept the Pi5 at below 40 degrees at normal use - it is connected to the 5v supply on the Pi 5 GPIO connector, but the Waveshare extender has a number of additional power supply connectors which can also be used. A [**Waveshare PCIe To M.2 Mini Adapte**](https://www.waveshare.com/product/raspberry-pi/hats/interface-power/pcie-to-m.2-mini.htm) was used with a Western Digtal SN570 500GB NVME SSD.
+
+<p align="left">  
 <img src="NVME/pimoroni0.png" height="140" /> 
 <img src="NVME/pimoroni1.png" height="140" />   
 <img src="NVME/pimoroni2.png" height="140" />   
